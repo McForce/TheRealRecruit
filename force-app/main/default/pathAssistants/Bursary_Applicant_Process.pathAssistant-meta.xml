@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Application__c</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Bursary Applicant Process</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Bursary_Status__c</fieldNames>
+        <fieldNames>Recruiter_Review__c</fieldNames>
+        <info>&lt;p&gt;If you are happy for this Applicant to be interview, set Recruiter review to &amp;quot;Good Fit&amp;quot;&lt;/p&gt;</info>
+        <picklistValueName>Advertise and Screen</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Bursary_Status__c</fieldNames>
+        <info>&lt;p&gt;Calculate bursary offer&lt;/p&gt;&lt;p&gt;Partner review&lt;/p&gt;&lt;p&gt;Contracts&lt;/p&gt;&lt;p&gt;Capture/update system&lt;/p&gt;&lt;p&gt;Follow up&lt;/p&gt;&lt;p&gt;Update results/POR&lt;/p&gt;</info>
+        <picklistValueName>Offer &amp; Maintain</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Bursary_Status__c</fieldNames>
+        <info>&lt;p&gt;Set up assessment&lt;/p&gt;&lt;p&gt;Administer assessment&lt;/p&gt;&lt;p&gt;Process results&lt;/p&gt;</info>
+        <picklistValueName>Set up Assessments</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Bursary_Status__c</fieldNames>
+        <info>&lt;p&gt;Set up interviews&lt;/p&gt;&lt;p&gt;Interview&lt;/p&gt;</info>
+        <picklistValueName>Set up interviews</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Bursary</recordTypeName>
+</PathAssistant>

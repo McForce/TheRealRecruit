@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Application__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Full Time Application</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Recruiter_Review__c</fieldNames>
+        <fieldNames>Recruiter_Notes__c</fieldNames>
+        <info>&lt;p&gt;Please review the application and make a decision to send to send for review by Hiring Manager,&lt;/p&gt;&lt;p&gt;if you set the Recruiter Review field as &amp;quot;Good fit&amp;quot; their profile will be included in the Job Spec for Candidates to be reviewed by Hiring Manager&lt;/p&gt;</info>
+        <picklistValueName>Review candidate for Manager</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Hiring_Manager_Interview_Decline__c</fieldNames>
+        <info>&lt;p&gt;Please review this Applicant and choose whether you want to Decline or interview the Candidate&lt;/p&gt;</info>
+        <picklistValueName>To be reviewed by Hiring Manager</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Full_Time</recordTypeName>
+</PathAssistant>

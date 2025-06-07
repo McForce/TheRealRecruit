@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic handles the updating of Application records. It encompasses user requests related to Updating their Application.</description>
+    <developerName>Application_Record_Update</developerName>
+    <genAiFunctions>
+        <functionName>Update_Application_Final_Auto_2</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Make sure you update the correct fields with the correct information, use the working from the prompt exactly</description>
+        <developerName>instruction_makesureyo0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_makesureyo0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Take the input from the Update Application Prompt and populate the relevant fields on the Application record</description>
+        <developerName>instruction_taketheinp1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_taketheinp1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When a user asks you to update their application record do so with the input from the output of the prompt provided by the Update Application Prompt</description>
+        <developerName>instruction_whenausera2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenausera2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When updating the candidate record, verify the accuracy of the provided information.</description>
+        <developerName>instruction_whenupdati3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenupdati3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When Updating the Non Negotiables field, always start with Yes or No, and if no explain where they fell short</description>
+        <developerName>instruction_whenupdati4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenupdati4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Application Record Update</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to analyze the Candidate and match them to the Job Rec, this is done by the Update Application Prompt. the prompt will answer questions on the Application object and you are to populate fields such as Application Rating, Overview of applicant, What makes applicant a good fit, and What requirements/ Skills missing.</scope>
+</GenAiPlugin>

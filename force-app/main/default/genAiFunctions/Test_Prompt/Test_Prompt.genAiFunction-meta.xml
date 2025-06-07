@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>You are an AI specialist skilled in analyzing resumes (CVs) for recruitment and talent acquisition purposes. Your task is to carefully review and extract relevant information from the CV of a candidate and categorise the CV in sections related to their qualifications, experience, skills, education, Address Languages etc or any other details typically found in a CV so that you can take the information and populate in a Candidate record later on in the Agent process</description>
+    <invocationTarget>Test_Prompt</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Test Prompt</masterLabel>
+</GenAiFunction>

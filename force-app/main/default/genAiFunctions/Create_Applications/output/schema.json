@@ -1,0 +1,58 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "ApplicationRating" : {
+      "title" : "ApplicationRating",
+      "description" : "You are to take the Application Rating and divide by 10\nFormat: number and to populate the Application Rating field of the Application record",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "EmailAdress" : {
+      "title" : "EmailAdress",
+      "description" : "The Email address of the User",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__textType"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Current Job_Spec__c record Id and the record you are on right now and to populate the Job_Spec__c field of the Application record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Job_Spec__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Rating" : {
+      "title" : "Rating",
+      "description" : "You are to take the Application Rating and divide by 10\nFormat: number ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Resume_Summary" : {
+      "title" : "Resume_Summary",
+      "description" : "This is the Resume Summary provided per candidate, to update the Application_Overview__c field",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

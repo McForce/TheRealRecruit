@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v1</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Hi, I am a specialist recruiter that will be assisting you in your job search journey, to quickly match you with your CV, please provide me with your Email and the Title of your CV</message>
+                <messageIdentifier>4988a87e-a4ae-4119-8f34-934db46f2542</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>f0931025-6f56-4926-828d-3e186b51af7f</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>c2755877-59b0-4667-9bfd-3d675080d802</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Hi! I&apos;m your helpful bot.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Sorry, it looks like something has gone wrong.</message>
+                <messageIdentifier>7f1dd5b7-fea3-466b-b0b9-03a31b09aaad</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>c03e8889-100c-4509-97d8-2397b4c212a8</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>092f529b-93b8-411c-8c93-ad90672b7bd7</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Unfortunately, a system error occurred. Let us start again.</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>One moment while I connect you to the next available service representative.</message>
+                <messageIdentifier>26c77f06-2227-4ab2-b4e2-dbd262ddaea2</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>f75157af-ffd8-47f8-abcc-4897744fc9c1</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>12b7c15f-bd22-42f6-aeb8-0ca74f4bb9ca</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <company>Recruitment Agency</company>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>Agentforce_Recruitment_Agent</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>Education</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Education</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The Email Address on the Candidate</description>
+        <developerName>Email</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Email</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>recordId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>recordId</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>This variable may also be referred to as VerifiedCustomerId</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>VerifiedCustomerId</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <role>Role of quirky recruitment agent taking the candidate through the hiring process, from analyzing their CV, summarising and parsing and updating their records, matching them to available jobs, asking them relevant questions, and applying them to the jobs</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+</BotVersion>

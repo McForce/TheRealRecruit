@@ -1,0 +1,132 @@
+{
+  "required" : [ "Email", "JobName", "Job_Spec" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application" : {
+      "title" : "Application",
+      "description" : "This is the Application record to be created",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Application__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "ApplicationRating" : {
+      "title" : "ApplicationRating",
+      "description" : "This is a number out of ten you as the specialist recruiter need to score them, if you match the Candidate__c with the Job_Spec__c",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Applications" : {
+      "title" : "Applications",
+      "description" : "These are all the application records to be created",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__recordInfoType",
+        "lightning:sObjectInfo" : {
+          "apiName" : "Application__c"
+        }
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "CandidateId" : {
+      "title" : "CandidateId",
+      "description" : "This is the recordId of the candidate__c record you are conversing with that gave their email address in the beginning of the Chat\nFormat: 18 Character ID field, found from the ID number of the Applicant record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CandidateRecord" : {
+      "title" : "CandidateRecord",
+      "description" : "This is the recordId of the candidate__c record you are conversing with that gave their email address in the beginning of the Chat\nFormat: 18 Character ID field, found from the ID number of the Applicant record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Candidate__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "This is the email of the Candidate provided by them in the beginning of the conversation",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "JobName" : {
+      "title" : "JobName",
+      "description" : "This is the Name of the Job_Spec__c the candidate indidated they are interested in, the Candidate will input the name/s of the job specFormat: 18 Character ID format",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Job_Spec__c record ID the candidate indicated they are interested in, to be matched with the Name of the Job Spec, SOQL: SELECT id from Job_Spec__c where Name = ''\nFormat: 18 Character ID format",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Job_Spec_Records" : {
+      "title" : "Job_Spec_Records",
+      "description" : "These are the Job_Spec__c record IDs the candidate indicated they are interested in, to be matched with the Name of the Job Spec, SOQL: SELECT id from Job_Spec__c where Name = ''\nFormat: 18 Character ID format",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__recordInfoType",
+        "lightning:sObjectInfo" : {
+          "apiName" : "Job_Spec__c"
+        }
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Overview" : {
+      "title" : "Overview",
+      "description" : "This would be an overview of why this candidate would be a good or bad fit for the job provided by you",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "QAs" : {
+      "title" : "QAs",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Questions to ask field and answers by the Candidate for these questions specifically",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "QuestionsToAsk" : {
+      "title" : "QuestionsToAsk",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Questions to ask field",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Rating" : {
+      "title" : "Rating",
+      "description" : "This is a number out of ten you as the specialist recruiter need to score them, if you match the Candidate__c with the Job_Spec__c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "badfit" : {
+      "title" : "badfit",
+      "description" : "What skills/ Qualifications/ requirements are missing from the candidate with regards to the Job_Spec__c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "goodfit" : {
+      "title" : "goodfit",
+      "description" : "Why is this Candidate a good fit for this Job_Spec__c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</activeVersionIdentifier>
+    <description>This prompt will analyze an image that is the Matric results of a graduate</description>
+    <developerName>Matric_Image</developerName>
+    <masterLabel>Matric Image</masterLabel>
+    <templateVersions>
+        <content>You are a Recruitment Agent Specialising in recruiting School students. You received an image {!$Input:files.Id} of a Student&apos;s final year&apos;s School results. You will notice all the subjects as well as the respective mark for each subject
+
+Instructions:
+&quot;&quot;&quot; 
+Analyze all the images and files provided, detailing the results per subject and calculate the average mark
+
+Did the candidate met minimum requirements for admission to bachelor&apos;s degree, diploma or higher certificate? 
+
+&quot;&quot;&quot;
+   
+Now, generate a response based on this evaluation.
+</content>
+        <inputs>
+            <apiName>files</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>files</masterLabel>
+            <referenceName>Input:files</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Recruitment Agent Specialising in recruiting School students. You received an image {!$Input:files.Id} of a Student&apos;s final year&apos;s School results. You will notice all the subjects as well as the respective mark for each subject
+
+Instructions:
+&quot;&quot;&quot; 
+Analyze all the images and files provided, detailing the results per subject and calculate the average mark
+
+Did the candidate met minimum requirements for admission to bachelor&apos;s degree, diploma or higher certificate? 
+
+&quot;&quot;&quot;
+   
+Now, generate a response based on this evaluation.
+</content>
+        <inputs>
+            <apiName>files</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>files</masterLabel>
+            <referenceName>Input:files</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultVertexAIGemini20Flash001</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

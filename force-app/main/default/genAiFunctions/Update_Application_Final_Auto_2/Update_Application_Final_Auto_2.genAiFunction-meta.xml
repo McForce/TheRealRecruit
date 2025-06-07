@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action will be  taking the input from the Update application Prompt that is Analyzing the Candidate__c and Matching them to the Job_Spec__c that they applied for and then updating the Application__c record, specifically the Application Rating, Overview of applicant, What makes applicant a good fit and What requirements/ Skills missing fields</description>
+    <invocationTarget>Update_Application_Final_Auto</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Update Application Final Auto 2.0</masterLabel>
+</GenAiFunction>

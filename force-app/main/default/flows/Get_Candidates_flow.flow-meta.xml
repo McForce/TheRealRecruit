@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Matched_Jobs</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Matched Jobs</label>
+        <locationX>368</locationX>
+        <locationY>667</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Name: {!Loop_Jobs.Name}
+Position Title: {!Loop_Jobs.Name}
+Seniority Level: {!Loop_Jobs.Seniority_Level__c}
+Job Description: {!Loop_Jobs.Job_Description__c}
+Additional Information: {!Loop_Jobs.Additional_Information__c}
+Industry: {!Loop_Jobs.Industry__c}
+$Output.Prompt
+Employment Type: {!Loop_Jobs.Employment_Type__c}
+Required Skills: {!Loop_Jobs.Required_Skills__c}
+Required Qualifications: {!Loop_Jobs.RequiredQualifications__c}
+Required Experience: {!Loop_Jobs.Required_Experience__c}
+Industries Worked in: {!Loop_Jobs.Industries_Worked_in__c}
+The Perfect Candidate: {!Loop_Jobs.The_Perfect_Candidate__c}
+Salary Range Minimum: {!Loop_Jobs.Salary_Range_Minimum__c}
+Salary Range Maximum: {!Loop_Jobs.Salary_Range_Maximum__c}
+</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Send_Candidate_details</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Send Candidate details</label>
+        <locationX>864</locationX>
+        <locationY>698</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Name: {!Loop.Name}
+Work History/ Experience: {!Loop.Work_History__c}
+Current Location: {!Loop.Address__c}
+Skills: {!Loop.Skills__c}
+Qualification : {!Loop.Education__c}
+Certifications:{!Loop.Certifications__c}
+Record Link: {!Loop.Candidate_Link__c}
+</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Topic</name>
+        <label>Topic</label>
+        <locationX>654</locationX>
+        <locationY>340</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Matching_Jobs</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_AI_Plugin</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Jobs</targetReference>
+            </connector>
+            <label>Matching Jobs</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Get Candidates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Candidates flow</label>
+    <loops>
+        <name>Loop</name>
+        <label>Loop</label>
+        <locationX>776</locationX>
+        <locationY>590</locationY>
+        <collectionReference>Get_Candidates</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Send_Candidate_details</targetReference>
+        </nextValueConnector>
+    </loops>
+    <loops>
+        <name>Loop_Jobs</name>
+        <label>Loop Jobs</label>
+        <locationX>346</locationX>
+        <locationY>419</locationY>
+        <collectionReference>Get_Jobs</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Matched_Jobs</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <recordLookups>
+        <name>Get_AI_Plugin</name>
+        <label>Get AI Plugin</label>
+        <locationX>776</locationX>
+        <locationY>182</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Topic</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Matching_Candidate_to_Jobs</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>GenAiPluginDefinition</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Candidates</name>
+        <label>Get Candidates</label>
+        <locationX>776</locationX>
+        <locationY>482</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Candidate__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Jobs</name>
+        <label>Get Jobs</label>
+        <locationX>391</locationX>
+        <locationY>261</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Jobs</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Job_Spec__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Get_AI_Plugin</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>JobrecordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Job_Spec__c</objectType>
+    </variables>
+</Flow>

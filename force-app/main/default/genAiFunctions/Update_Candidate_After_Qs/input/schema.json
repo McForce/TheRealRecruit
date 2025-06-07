@@ -1,0 +1,161 @@
+{
+  "required" : [ "Consultingorinhouse", "Reasonforleaving", "Willingtoworkcontract" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Address" : {
+      "title" : "Address",
+      "description" : "The address field to be populated with the Candidate's Address from the CV Document Format: Text",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "CTC" : {
+      "title" : "CTC",
+      "description" : "For the Cost_To_Company__c field, ask them what their total cost to company is and populate accordingly",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CareerGloals" : {
+      "title" : "CareerGloals",
+      "description" : "For the Career_Goals__c field, find out from the candidate what their career goals are, and populate the field according to their answer",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CareerTitle" : {
+      "title" : "CareerTitle",
+      "description" : "Their Career Title will be found on their CV on the last held position, for example Salesforce Developer, Salesforce Architect, Salesforce Admin ETC",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Certs" : {
+      "title" : "Certs",
+      "description" : "Data Type: Long Text: Extracted from the candidate's CV using Einstein's data parsing found from the Certification's section on the CV Document. Format: Write in Bullet Point Format\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Consultingorinhouse" : {
+      "title" : "Consultingorinhouse",
+      "description" : "For the Prefer_Working_Inhouse_Or_Consulting__c field, ask the candidate if they would prefer working as a consultancy or inhouse/ directly for the client and populate the field accordingly",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "DOB" : {
+      "title" : "DOB",
+      "description" : "The Date Field to be populated with the Candidate's date of birth from the CV Document Format: YYYY-MM-DD IF there is no date of birth on the CV this can be ignored\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Education" : {
+      "title" : "Education",
+      "description" : "Data Type: Rich Text: Extracted from the candidate's CV using Einstein's data parsing found from the Education section on the CV Document. Format: Rich Text Bullet Point Institution Qualification Year Qualified Any other information mentioned like subjects, activities, affiliations etc\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "The Email to be populated with the Candidate's email address from the CV Document Format: Email\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "FName" : {
+      "title" : "FName",
+      "description" : "The first Name/s of the Candidate found on their CV Document\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "LName" : {
+      "title" : "LName",
+      "description" : "The last Name of the Candidate found on their CV Document\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Languages" : {
+      "title" : "Languages",
+      "description" : "Data Type: Rich Text: Extracted from the candidate's CV using Einstein's data parsing found from the Certification's section on the CV Document. Format: text, seperated by , example: English, Spanish\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Phone" : {
+      "title" : "Phone",
+      "description" : "The phone to be populated with the Candidate's Phone/ Contact/ Mobile/ Phone Number from the CV Document Format: Phone\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Reasonforleaving" : {
+      "title" : "Reasonforleaving",
+      "description" : "for the Reason_for_leaving_current_role__c field,, populate from their last role if they did provide a reason\nIf they did not provide a reason, ask them why they want to leave their current job and and populate the field accordingly",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Seniority" : {
+      "title" : "Seniority",
+      "description" : "For the Seniority__c field, based on their current position and title and years of experience you can make your call weather they are Entry mid or Senior",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Skills" : {
+      "title" : "Skills",
+      "description" : "Data Type: Long Text: Extracted from the candidate's CV using Einstein's data parsing found from the skills section on the CV Document. Format: Write in Bullet Point Format\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Socials" : {
+      "title" : "Socials",
+      "description" : "The Candidate's Socials found on their CV, only list what is listed on CV Format: Long text, Document for Example Twitter: Github: Trailhead: LinkedIn:\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Summary" : {
+      "title" : "Summary",
+      "description" : "This is a summary of the Candidate done by the Agent, summarising their overall CV. Format: Long Text Example: This Candidate is a Salesforce Architect and has 7 years Professional working experience with 5 years in Salesforce, they have a degree in Computer Sciences and 5 Salesforce Certifications",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "VarDOB" : {
+      "title" : "VarDOB",
+      "description" : "The Date Field to be populated with the Candidate's date of birth from the CV Document Format: YYYY-MM-DD IF there is no date of birth on the CV this can be ignored\n",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Willingtoworkcontract" : {
+      "title" : "Willingtoworkcontract",
+      "description" : "for the Willing_to_work_Contract_Work__c field, ask them if they would be willing to do contract work and populate accordingly",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "WorkHistory" : {
+      "title" : "WorkHistory",
+      "description" : "Data Type: Rich Text: Extracted from the candidate's CV using Einstein's data parsing found from the Work/ Professional Experience section on the CV Document. Format: Rich Text Title | Company Name | Location | Date from and To Bullet point of their duties, Projects they worked on, Achievements and anything else they mentioned Reason for leaving if on CV\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "This is the Candidate__c record and the record's ID is to be pushed in to the recordId variable\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

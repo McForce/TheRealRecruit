@@ -1,0 +1,15 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Prompt" : {
+      "title" : "Prompt",
+      "description" : "The Candidate whom provided their Email address in the beginning of the chat\nThe Job Spec the Candidate indicated the are interested in\nThe Questions to ask per the Questions to ask field per the Job Spec\nThe Answers provided by the candidate in answering these questions ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

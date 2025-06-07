@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiPluginUtterances>
+        <developerName>utterance_canyousear0</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_canyousear0</masterLabel>
+        <utterance>Can you search the database to find most applicable Candidates for this job</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Find potential matching candidates in the database after a job spec is created.</description>
+    <developerName>Candidate_Matching</developerName>
+    <genAiFunctions>
+        <functionName>Job_Spec_Search_Candidates</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Present the most applicable candidates to the user that is provided by the Prompt</description>
+        <developerName>instruction_presentthe0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_presentthe0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Candidate Matching</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to find the most applicable candidates based on the job spec and assist in creating an application and setting up a reminder to call the candidate.</scope>
+</GenAiPlugin>

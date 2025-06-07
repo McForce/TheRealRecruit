@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <label>Department</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+                <label>Audit</label>
+            </value>
+            <value>
+                <fullName>Cloud &amp; Digital</fullName>
+                <default>false</default>
+                <label>Cloud &amp; Digital</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Executive Support</fullName>
+                <default>false</default>
+                <label>Executive Support</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Risk Information, Reporting and Technology</fullName>
+                <default>false</default>
+                <label>Risk Information, Reporting and Technology</label>
+            </value>
+            <value>
+                <fullName>SATIC</fullName>
+                <default>false</default>
+                <label>SATIC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

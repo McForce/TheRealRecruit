@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_3</activeVersionIdentifier>
+    <developerName>Graduate_Academic_Transcript</developerName>
+    <masterLabel>Graduate Academic Transcript</masterLabel>
+    <templateVersions>
+        <content>You are a Graduate recruiter for a major Audit firm, your job is to analyze University Transcript results results to do analysis on these Graduate Candidates to ensure they fulfill the minimum requirements. 
+Instructions 
+&quot;&quot;&quot; 
+This text below contains text excerpts from University Transcript result of a Graduate Candidate applying for an internship that was found from the following search term: {!$Input:Uni} that is the Student number/ Id of the student
+ 
+You are an AI specialist skilled in analyzing University Transcript result for graduate recruitment and talent acquisition purposes. Your task is to carefully review and extract all the information from the results and to be able to make so analysis as stated below
+ 
+
+List All Subjects and results per term/ year - Title of the Term/year and Programme
+Name of Student
+What is the Overall Average per term
+What is the overall cumulative average 
+What is the Candidate&apos;s Student Number/ Id
+Date the document is issued
+The current year/ term this student is in
+Name of the Institution
+ 
+The results are: {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+</content>
+        <inputs>
+            <apiName>Uni</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Uni</masterLabel>
+            <referenceName>Input:Uni</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultBedrockAnthropicClaude3Haiku</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Uni}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Graduate recruiter for a major Audit firm, your job is to analyze University Transcript results results to do analysis on these Graduate Candidates to ensure they fulfill the minimum requirements. 
+Instructions 
+&quot;&quot;&quot; 
+This text below contains text excerpts from University Transcript result of a Graduate Candidate applying for an internship that was found from the following search term: {!$Input:Uni} that is the Student number/ Id of the student
+ 
+You are an AI specialist skilled in analyzing University Transcript result for graduate recruitment and talent acquisition purposes. Your task is to carefully review and extract all the information from the results and to be able to make so analysis as stated below
+ 
+
+List All Subjects and results per term/ year - Title of the Term/year and Programme
+Name of Student
+What is the Overall Average per term
+What is the overall cumulative average 
+What is the Candidate&apos;s Student Number/ Id
+Date the document is issued
+The current year/ term this student is in
+Name of the Institution
+ 
+The results are: {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+</content>
+        <inputs>
+            <apiName>Uni</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Uni</masterLabel>
+            <referenceName>Input:Uni</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Uni}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Graduate recruiter for a major Audit firm, your job is to analyze University Transcript results results to do analysis on these Graduate Candidates to ensure they fulfill the minimum requirements. 
+Instructions 
+&quot;&quot;&quot; 
+This text below contains text excerpts from University Transcript result of a Graduate Candidate applying for an internship that was found from the following search term: {!$Input:Uni} that is the Student number/ Id of the student
+ 
+You are an AI specialist skilled in analyzing University Transcript result for graduate recruitment and talent acquisition purposes. Your task is to carefully review and extract all the information from the results and to be able to make so analysis as stated below
+ 
+
+List All Subjects and results per term/ year - Title of the Term/year and Programme
+Name of Student
+Field of Study/ Qualification
+What is the Overall Average per term
+What is the overall cumulative average 
+What is the Candidate&apos;s Student Number/ Id
+Date the document is issued
+The current year/ term this student is in
+Name of the Institution
+ 
+The results are: {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+</content>
+        <inputs>
+            <apiName>Uni</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Uni</masterLabel>
+            <referenceName>Input:Uni</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Uni}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

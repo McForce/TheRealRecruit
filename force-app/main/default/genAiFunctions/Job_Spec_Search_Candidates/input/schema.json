@@ -1,0 +1,24 @@
+{
+  "required" : [ "Input:Job_Spec" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Job_Spec" : {
+      "title" : "Job Spec",
+      "description" : "This is the record Id of the Job_Spec_c record you are on right now",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Job_Spec__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

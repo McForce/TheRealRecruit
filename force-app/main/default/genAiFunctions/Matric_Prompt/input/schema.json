@@ -1,0 +1,34 @@
+{
+  "required" : [ "Input:Candidate", "Input:Results" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Candidate" : {
+      "title" : "Candidate",
+      "description" : "This is the Candidate record Id \nFormat: 18 digit ID number",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Candidate__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Input:Results" : {
+      "title" : "Results",
+      "description" : "The File Id (Content Document record Id) attached to the Candidate's CV\nFormat:  18 digit ID number",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "ContentDocument"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

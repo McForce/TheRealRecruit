@@ -1,0 +1,69 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application" : {
+      "title" : "Application",
+      "description" : "This is the Application__c record Id This is the Application_c record that the Candidate is applying for and is related to the Candidate record Format: 18 digit ID",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "BadFit" : {
+      "title" : "BadFit",
+      "description" : "What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec Format: Long Text The input is retrieved from the Update Application Prompt where it will say: What requirements/ Skills missing:\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "The Email of the Candidate\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "GoodFit" : {
+      "title" : "GoodFit",
+      "description" : "What makes applicant a good fit for this specific job spec Format: Long Text The input is retrieved from the Update Application Prompt where it will say: What makes applicant a good fit\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Job Spec the Candidate is applying for, this record is related to the Application record The Id is provided by the user:(Job Spec ID:) Application record Format: 18 digit ID\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "NonNegotiables" : {
+      "title" : "NonNegotiables",
+      "description" : "Format: Text Input: NonNegotiables These are the non negotiables as specified on the Job Spec record and whether the Candidate has all the non negotiables or not, and to be populated on the Non Negotiables field on the Application record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Overview" : {
+      "title" : "Overview",
+      "description" : "Overview of Candidate: Give a short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good Format: Long Text The input is retrieved from the Update Application Prompt; Overview\n\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Rating" : {
+      "title" : "Rating",
+      "description" : "Application Rating: What would you score the applicant out of ten for this Job Spec Format: Number The input is retrieved from the Update Application Prompt where it will say: Application Rating:\n",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "RecordId" : {
+      "title" : "RecordId",
+      "description" : "This is the Candidate__c record Id This Id is provided by the User: (RecordId: )\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

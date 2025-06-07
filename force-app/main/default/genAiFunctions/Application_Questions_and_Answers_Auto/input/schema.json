@@ -1,0 +1,56 @@
+{
+  "required" : [ "Application_Code", "CTC", "CTCBreakdown", "CareerGoals", "Email" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application_Code" : {
+      "title" : "Application_Code",
+      "description" : "Format: 5 digit number, found on the Application record Application_Code__c field\nThis is the unique identifier of the Application record ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CTC" : {
+      "title" : "CTC",
+      "description" : "This is a Text field but the Candidate will give a Currency format. This is their total cost to company",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CTCBreakdown" : {
+      "title" : "CTCBreakdown",
+      "description" : "Format: Text\nThis is a breakdown of what is included in their Cost To Company\nExample, \nBasic Salary: R50000, Medical: Aid R1000, Pension: R5000\nAnd if they are getting a Bonus or not",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CareerGoals" : {
+      "title" : "CareerGoals",
+      "description" : "Format: Text\nThese are the Candidate's Career goals ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "Format: Email\nThis is the Email Address the Candidate typed when they started their chat. This is the unique identifier if the Candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "QuestionsAndAnswers" : {
+      "title" : "QuestionsAndAnswers",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Questions to ask field and answers by the Candidate for these questions specifically",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "ReasonForLeaving" : {
+      "title" : "ReasonForLeaving",
+      "description" : "This is the Reason for leaving the candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

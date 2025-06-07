@@ -1,0 +1,60 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "AcedemicResults" : {
+      "title" : "AcedemicResults",
+      "description" : "Format: Rich Text\nList the Year/ Term | Program of study, linebreak\nList of Subject and results for that term\n\nLine Break \n\nRepeat\n\nTo populate the Academic_Results__c and University_Academic_Results fields \n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "DocIssued" : {
+      "title" : "DocIssued",
+      "description" : "The Date the document is issued\nFormat: Date\nInput from the Graduate Academic Transcript prompt\nTo populate Date_Academic_Transcript_Issue__c field",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Quali" : {
+      "title" : "Quali",
+      "description" : "Format: Text \nField of Study/ Qualification\nInput from the Graduate Academic Transcript prompt\nTo Populate University_Name__c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "StudentNumber" : {
+      "title" : "StudentNumber",
+      "description" : "The Student number the user has provided\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "UniAve" : {
+      "title" : "UniAve",
+      "description" : "The overall cumulative average \nFormat: Text\nInput from the Graduate Academic Transcript prompt\nTo populate the University_Average__c field",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "UniName" : {
+      "title" : "UniName",
+      "description" : "Name of the Institution\nFormat: Text\nInput from the Graduate Academic Transcript prompt\nTo populate the University_Average__c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

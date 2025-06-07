@@ -1,0 +1,57 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application_Code" : {
+      "title" : "Application_Code",
+      "description" : "Format: 5 digit number, found on the Application record Application_Code__c field This is the unique identifier of the Application record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Candidate" : {
+      "title" : "Candidate",
+      "description" : "This is the Candidate__c record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Candidate__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "Format: Email This is the Email Address the Candidate typed when they started their chat. This is the unique identifier if the Candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Job_Spec__c record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Job_Spec__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "QuestionsAndAnswers" : {
+      "title" : "QuestionsAndAnswers",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Questions to ask field and answers by the Candidate for these questions specifically Number the Question, and bullet the answers",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

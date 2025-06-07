@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This Topic addresses the Candidate record and their CV. The Candidate is the user talking to you, you, if you are not on their Candidate record you must ask for their Email address and make use of the Get Candidate Action, if you are on the Candidate record you have access to their Email Address, make sure you are matching the correct CV, if they email addresses dont match dont bring up the CV. Search for candidate&apos;s CV Document from the Default Retriever by way of matching this candidate&apos;s Email address found in the Chunk and using the Test Prompt Action. Then Parse the whole CV</description>
+    <developerName>CV_Search_and_Parse0</developerName>
+    <genAiFunctions>
+        <functionName>CV_Parse_Prompt</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Candidate_TTF</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If you are on the Candidate record and only if the candidate has provided you with their email address, Search for candidate&apos;s CV Document from the Default Retriever by way of matching this candidate&apos;s Email address found in the Chunk and using the Test Prompt Action. Then Parse the whole CV</description>
+        <developerName>instruction_ifyouareon0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifyouareon0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the Candidate is not known,  you must always ask for their email address, upon receiving their email address you are to get their Candidate record by running the action &apos;Get Candidate&apos; before running any other actions. Example question, can you please take me to my candidate record.</description>
+        <developerName>instruction_ifthecandi1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifthecandi1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>CV Search and Parse</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>The Agents job is to take the candidate to their record and then help them parse their CV, Ensure you Match and bring up the correct by way of the Candidates&apos;s Email address (Candidate__c record you are on right now (recordId), if you are on their record), and then searching or the Chunk that contains that email address. If not you must ask for their email address</scope>
+</GenAiPlugin>

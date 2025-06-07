@@ -1,0 +1,34 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Average" : {
+      "title" : "Average",
+      "description" : "This is the Average that was given to you by the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "CandidateId" : {
+      "title" : "CandidateId",
+      "description" : "the candidate Id given to you by the user\nFormat: Record Id 18 digit",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "MinimumRequirements" : {
+      "title" : "MinimumRequirements",
+      "description" : "The User will indicate whether the candidate met minimum requirements for admission to bachelor's degree, diploma or higher certificate?",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Results" : {
+      "title" : "Results",
+      "description" : "These are the Matric results provided to you by the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

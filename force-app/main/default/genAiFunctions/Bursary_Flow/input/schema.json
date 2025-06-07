@@ -1,0 +1,89 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application_Code" : {
+      "title" : "Application_Code",
+      "description" : "Format: 5 digit number, found on the Application record Application_Code__c field This is the unique identifier of the Application record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Candidate" : {
+      "title" : "Candidate",
+      "description" : "This is the Candidate__c record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Candidate__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Criminal" : {
+      "title" : "Criminal",
+      "description" : "The user's answer to the \"Do you have a criminal record\" question if yes then they need to give an explanation. This is to be used in the Criminal Output To populate the Criminal_record__c field on the Applicant record Format: Text",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "Format: Email This is the Email Address the Candidate typed when they started their chat. This is the unique identifier if the Candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "FamInPWC" : {
+      "title" : "FamInPWC",
+      "description" : "The User needs to specify whether they have family in the company for the question: do you have Family or friends in PwC Field to update on Application: Family_in_PWC__c Format: Text",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "FirstPrefOffice" : {
+      "title" : "FirstPrefOffice",
+      "description" : "The User will indicate which office they prefer When they are asked to do so Format: Text Field to update on Application: Preferred_Office__c",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "FirstUniversityChoice" : {
+      "title" : "FirstUniversityChoice",
+      "description" : "The User will indicate to which University they have applied for When they are asked to do so Format: Text",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Job_Spec__c record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Job_Spec__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "QuestionsAndAnswers" : {
+      "title" : "QuestionsAndAnswers",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Questions to ask field and answers by the Candidate for these questions specifically",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "SAICA" : {
+      "title" : "SAICA",
+      "description" : "The User needs to indicate if they have ever been a member of the CAICA Format: Text To populate the Been_in_a_SAICA_Contract__c field on the Candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "SecondPrefOffice" : {
+      "title" : "SecondPrefOffice",
+      "description" : "The User will indicate which office they prefer second Format: Text To populate the Second_preferred_office__c on the Applicant record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

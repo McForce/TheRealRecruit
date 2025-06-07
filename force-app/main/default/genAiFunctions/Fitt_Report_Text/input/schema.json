@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:Fitt" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Fitt" : {
+      "title" : "Fitt",
+      "description" : "Format: Text",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Use this Topic if the user gives you a unique 5 digit  number Application identifier (Only use this topic if the unique identifier are numbers) first followed by an email address. The user applied for a job and was sent a link, this link will take them to the experience Cloud site where they will start chatting with you. 
+Their first input will be their Email Address and unique Application_Code__c, once they have typed this you will know to use the First Screening Questions topic</description>
+    <developerName>First_Screening_Questions</developerName>
+    <genAiFunctions>
+        <functionName>Bursary_Flow</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Dont ask all the questions at once, ask one at a time</description>
+        <developerName>instruction_dontaskall0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_dontaskall0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the Candidate types the Application Code and their email You must ask the questions in order from the the &quot;Questions to ask&quot; questions from the Job Spec record, you must populate the answers from the user on the applicable fields on the Application record</description>
+        <developerName>instruction_oncethecan1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_oncethecan1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Only use this topic if the User provides you with Numbers, If they provide Letters before the email, than this is not the correct Topic to use</description>
+        <developerName>instruction_onlyusethi2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onlyusethi2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Update the applicable variable as the User answers the questions, and when the user has finished answer all the questions, update all the relevant fields with the relevant stored variables</description>
+        <developerName>instruction_updatethea3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_updatethea3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When the question is asked why do you want to work for PWC and the answer is something in the lines of my values align with the company&apos;s, follow up with &quot;And which values do you feel aligns&quot;</description>
+        <developerName>instruction_whentheque4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whentheque4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When there are options, you can ask the question, And then beneath list the Options</description>
+        <developerName>instruction_whentherea5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whentherea5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Remember all the User&apos;s Answers to the questions, and only update the fields when all the questions have been answered</description>
+        <developerName>instruction_rememberal6</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_rememberal6</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>First Screening Questions</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to firstly find the Application__c record by the unique Application Code, then the Candidate__c by the Email, then the Job_Spec__c that is also on the Application record. You are then to ask the questions that are on the Job Spec record per the Questions_To_Ask__c field
+Its is your job to get as much information from the candidate as you can, You must ask probing questions if the answer is vague</scope>
+</GenAiPlugin>

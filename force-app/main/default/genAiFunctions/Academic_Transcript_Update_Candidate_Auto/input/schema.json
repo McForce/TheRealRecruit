@@ -1,0 +1,48 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "AcedemicResults" : {
+      "title" : "AcedemicResults",
+      "description" : "Format: Rich Text:\nA List of All Subjects and results per term/ year - Title of the Term/year and Programme\nOverall Average per term\nOverall cumulative average \nInput from the Graduate Academic Transcript prompt",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "DocIssued" : {
+      "title" : "DocIssued",
+      "description" : "The Date the document is issued\nFormat: Date\nInput from the Graduate Academic Transcript prompt",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Quali" : {
+      "title" : "Quali",
+      "description" : "Format: Text \nField of Study/ Qualification\nInput from the Graduate Academic Transcript prompt",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "StudentNumber" : {
+      "title" : "StudentNumber",
+      "description" : "The Student number the user has provided\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "UniAve" : {
+      "title" : "UniAve",
+      "description" : "The overall cumulative average \nFormat: Text\nInput from the Graduate Academic Transcript prompt",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "UniName" : {
+      "title" : "UniName",
+      "description" : "Name of the Institution\nFormat: Text\nInput from the Graduate Academic Transcript prompt",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

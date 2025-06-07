@@ -1,0 +1,33 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application_Code" : {
+      "title" : "Application_Code",
+      "description" : "Format: 5 digit number, found on the Application record Application_Code__c field\nThis is the unique identifier of the Application record ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "Format: Email\nThis is the Email Address the Candidate typed when they started their chat. This is the unique identifier if the Candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "QuestionsAndAnswers" : {
+      "title" : "QuestionsAndAnswers",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Questions to ask field and answers by the Candidate for these questions specifically\nNumber the Question, and bullet the answers",
+      "lightning:type" : "lightning__richTextType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

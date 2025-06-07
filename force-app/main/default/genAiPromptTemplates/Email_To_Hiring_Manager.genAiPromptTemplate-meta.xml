@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_7</activeVersionIdentifier>
+    <developerName>Email_To_Hiring_Manager</developerName>
+    <masterLabel>Email To Hiring Manager</masterLabel>
+    <templateVersions>
+        <content>You are a recruitment agent who is tasked with summarizing the Candidates that applied to a specific job. You are then to write an email to the hiring manager where you will give a summary of the applicants, this will entail both the Candidate as well as their application. The whole point of the email is to get the Hiring Manager to choose Candidates that they want to interview
+ 
+&quot;&quot;&quot;
+Use clear, concise, and straightforward language using the active voice and strictly avoiding the use of filler words and phrases and redundant language.
+ 
+Generate a subject line: Job title {!$Input:Job_Spec.Job_Title__c} Candidates
+ 
+Generate the body of the email, which will have the following format:
+ 
+First add a title that includes the name of the Job Spec: {!$Input:Job_Spec.Job_Title__c} 
+ 
+First Paragraph, greet the Hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}, explain to them that we have gone through the qualification process and identified a couple of candidates to be interviewed for the specific job vacancy {!$Input:Job_Spec.Job_Title__c} 
+ 
+Then list the candidates that applied for this job in the following format
+ 
+Candidate Name {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt}, current position title {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt}, years experience in current field {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt}, company they are currently working at {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt}, and their Candidate Rating {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt}.
+ 
+next paragraph the overview of the candidate {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} of the Why they are a good match for this job spec {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt}, why they are a bad match {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt}
+ 
+Give a link to the Job_Spec so that the Hiring Manager can can click on and will be taken to the Job spec record (), and explain to them that they can view through the different applications from this record, all they have to do is choose the candidates they want to interview, and the system will automatically setup the interviews
+ 
+&quot;&quot;&quot;
+ 
+Now generate the email to the hiring manager
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultAzureOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_That_Applied_Prompt</definition>
+            <referenceName>Flow:Get_Candidates_That_Applied_Prompt</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a recruitment agent who is tasked with summarizing the Candidates that applied to a specific job. You are then to write an email to the hiring manager where you will give a summary of the applicants, this will entail both the Candidate as well as their application. The whole point of the email is to get the Hiring Manager to choose Candidates that they want to interview
+ 
+&quot;&quot;&quot;
+Use clear, concise, and straightforward language using the active voice and strictly avoiding the use of filler words and phrases and redundant language.
+ 
+Generate a subject line: Job title {!$Input:Job_Spec.Job_Title__c} Candidates
+ 
+Generate the body of the email, which will have the following format:
+ 
+First add a title that includes the name of the Job Spec: {!$Input:Job_Spec.Job_Title__c} 
+ 
+First Paragraph, greet the Hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}, explain to them that we have gone through the qualification process and identified a couple of candidates to be interviewed for the specific job vacancy {!$Input:Job_Spec.Job_Title__c} 
+ 
+Then list the candidates that applied for this job in the following format from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow,
+ 
+Candidate Name, current position title, years experience in current field , company they are currently working at, and their Candidate Rating.
+ 
+Next paragraph the overview of the candidate also from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow: Why they are a good match for this job spec, why they are a bad match
+ 
+Give a link to the Job_Spec so that the Hiring Manager can can click on and will be taken to the Job spec record (), and explain to them that they can view through the different applications from this record, all they have to do is choose the candidates they want to interview, and the system will automatically setup the interviews
+ 
+&quot;&quot;&quot;
+ 
+Now generate the email to the hiring manager
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultAzureOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_That_Applied_Prompt</definition>
+            <referenceName>Flow:Get_Candidates_That_Applied_Prompt</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a recruitment agent who is tasked with summarizing the Candidates that applied to a specific job. You are then to write an email to the hiring manager where you will give a summary of the applicants, this will entail both the Candidate as well as their application. The whole point of the email is to get the Hiring Manager to choose Candidates that they want to interview
+ 
+&quot;&quot;&quot;
+Use clear, concise, and straightforward language using the active voice and strictly avoiding the use of filler words and phrases and redundant language.
+ 
+Generate a subject line: Job title {!$Input:Job_Spec.Job_Title__c} Candidates
+ 
+Generate the body of the email, which will have the following format:
+ 
+First add a title that includes the name of the Job Spec: {!$Input:Job_Spec.Job_Title__c} 
+ 
+First Paragraph, greet the Hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}, explain to them that we have gone through the qualification process and identified a couple of candidates to be interviewed for the specific job vacancy {!$Input:Job_Spec.Job_Title__c} 
+ 
+Then list the candidates that applied for this job in the following format from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow per candidate:
+ 
+Candidate Name, current position title, years experience in current field , company they are currently working at, and their Candidate Rating.
+ 
+An overview of the candidate also from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow: Why they are a good match for this job spec, why they are a bad match
+ 
+Give a link to the Job_Spec so that the Hiring Manager can can click on and will be taken to the Job spec record, and explain to them that they can view through the different applications from this record, all they have to do is choose the candidates they want to interview, and the system will automatically setup the interviews
+ 
+&quot;&quot;&quot;
+ 
+Now generate the email to the hiring manager
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultAzureOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_That_Applied_Prompt</definition>
+            <parameters>
+                <definition>SOBJECT://Job_Spec__c</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Job_Spec</parameterName>
+                <valueExpression>{!$Input:Job_Spec}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Candidates_That_Applied_Prompt</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a recruitment agent who is tasked with summarizing the Candidates that applied to a specific job. You are then to write an email to the hiring manager where you will give a summary of the applicants, this will entail both the Candidate as well as their application. The whole point of the email is to get the Hiring Manager to choose Candidates that they want to interview
+ 
+&quot;&quot;&quot;
+Use clear, concise, and straightforward language using the active voice and strictly avoiding the use of filler words and phrases and redundant language.
+ 
+Greet the hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}
+ 
+Generate the body of the email, which will have the following format:
+ 
+First add a title that includes the name of the Job Spec: {!$Input:Job_Spec.Job_Title__c} 
+ 
+First Paragraph, greet the Hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}, explain to them that we have gone through the qualification process and identified a couple of candidates to be interviewed for the specific job vacancy {!$Input:Job_Spec.Job_Title__c} 
+ 
+Then list the candidates that applied for this job in the following format from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow per candidate:
+ 
+Candidate Name, current position title, years experience in current field , company they are currently working at, and their Candidate Rating.
+ 
+An overview of the candidate also from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow: Why they are a good match for this job spec, why they are a bad match
+ 
+You can end off with best regards,add the name of the recruiter {!$Input:Job_Spec.Owner.Name} 
+
+&quot;&quot;&quot;
+ 
+Now generate the email to the hiring manager
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultAzureOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_That_Applied_Prompt</definition>
+            <parameters>
+                <definition>SOBJECT://Job_Spec__c</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Job_Spec</parameterName>
+                <valueExpression>{!$Input:Job_Spec}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Candidates_That_Applied_Prompt</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_4</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a recruitment agent who is tasked with summarizing the Candidates that applied to a specific job. You are then to write an email to the hiring manager where you will give a summary of the applicants, this will entail both the Candidate as well as their application. The whole point of the email is to get the Hiring Manager to choose Candidates that they want to interview
+ 
+&quot;&quot;&quot;
+Use clear, concise, and straightforward language using the active voice and strictly avoiding the use of filler words and phrases and redundant language.
+ 
+Do not add a Subject
+
+Greet the hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}
+ 
+Generate the body of the email, which will have the following format:
+ 
+First add a title that includes the name of the Job Spec: {!$Input:Job_Spec.Job_Title__c} 
+ 
+First Paragraph, greet the Hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}, explain to them that we have gone through the qualification process and identified a couple of candidates to be interviewed for the specific job vacancy {!$Input:Job_Spec.Job_Title__c} 
+ 
+Then list the candidates that applied for this job in the following format from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow per candidate:
+ 
+Candidate Name, current position title, years experience in current field , company they are currently working at, and their Candidate Rating.
+ 
+An overview of the candidate also from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow: Why they are a good match for this job spec, why they are a bad match
+ 
+You can end off with best regards,add the name of the recruiter {!$Input:Job_Spec.Owner.Name} 
+
+&quot;&quot;&quot;
+ 
+Now generate the email to the hiring manager
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultAzureOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_That_Applied_Prompt</definition>
+            <parameters>
+                <definition>SOBJECT://Job_Spec__c</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Job_Spec</parameterName>
+                <valueExpression>{!$Input:Job_Spec}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Candidates_That_Applied_Prompt</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_5</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a recruitment agent who is tasked with summarizing the Candidates that applied to a specific job. You are then to write an email to the hiring manager where you will give a summary of the applicants, this will entail both the Candidate as well as their application. The whole point of the email is to get the Hiring Manager to choose Candidates that they want to interview
+ 
+&quot;&quot;&quot;
+Use clear, concise, and straightforward language using the active voice and strictly avoiding the use of filler words and phrases and redundant language.
+ 
+Do not add a Subject
+
+Greet the hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}
+ 
+Generate the body of the email, which will have the following format:
+ 
+First add a title that includes the name of the Job Spec: {!$Input:Job_Spec.Job_Title__c} 
+ 
+First Paragraph, greet the Hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}, explain to them that we have gone through the qualification process and identified a couple of candidates to be interviewed for the specific job vacancy {!$Input:Job_Spec.Job_Title__c} 
+ 
+Then list the candidates that applied for this job in the following format from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow per candidate:
+ 
+Candidate Name, current position title, years experience in current field , company they are currently working at, and their Candidate Rating.
+ 
+An overview of the candidate also from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow: Why they are a good match for this job spec, why they are a bad match
+ 
+You can end off with best regards,add the name of the recruiter {!$Input:Job_Spec.Owner.Name} 
+
+&quot;&quot;&quot;
+ 
+Now generate the email to the hiring manager
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_That_Applied_Prompt</definition>
+            <parameters>
+                <definition>SOBJECT://Job_Spec__c</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Job_Spec</parameterName>
+                <valueExpression>{!$Input:Job_Spec}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Candidates_That_Applied_Prompt</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_6</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a recruitment agent who is tasked with summarizing the Candidates that applied to a specific job. You are then to write an email to the hiring manager where you will give a summary of the applicants, this will entail both the Candidate as well as their application. The whole point of the email is to get the Hiring Manager to choose Candidates that they want to interview
+ 
+&quot;&quot;&quot;
+Use clear, concise, and straightforward language using the active voice and strictly avoiding the use of filler words and phrases and redundant language.
+ 
+Do not add a Subject
+
+Greet the hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}
+ 
+Generate the body of the email, which will have the following format:
+ 
+First add a title that includes the name of the Job Spec: {!$Input:Job_Spec.Job_Title__c} 
+ 
+First Paragraph, greet the Hiring Manager {!$Input:Job_Spec.Hiring_Manager__r.FirstName}, explain to them that we have gone through the qualification process and identified a couple of candidates to be interviewed for the specific job vacancy {!$Input:Job_Spec.Job_Title__c} 
+ 
+Then list the candidates that applied for this job in the following format from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow per candidate:
+ 
+Candidate Name, current position title, years experience in current field , company they are currently working at, and their Candidate Rating.
+ 
+An overview of the candidate also from the {!$Flow:Get_Candidates_That_Applied_Prompt.Prompt} flow: Why they are a good match for this job spec, why they are a bad match
+ 
+You can end off with best regards,add the name of the recruiter {!$Input:Job_Spec.Owner.Name} 
+
+&quot;&quot;&quot;
+ 
+Now generate the email to the hiring manager
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultBedrockAnthropicClaude3Haiku</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_That_Applied_Prompt</definition>
+            <parameters>
+                <definition>SOBJECT://Job_Spec__c</definition>
+                <isRequired>true</isRequired>
+                <parameterName>Job_Spec</parameterName>
+                <valueExpression>{!$Input:Job_Spec}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Candidates_That_Applied_Prompt</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_7</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

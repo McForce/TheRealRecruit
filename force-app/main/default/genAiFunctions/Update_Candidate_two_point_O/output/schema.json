@@ -1,0 +1,60 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Address" : {
+      "title" : "Address",
+      "description" : "The address field to be populated with the Candidate's Address from the CV Document Format: Text\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Certs" : {
+      "title" : "Certs",
+      "description" : "Data Type: Long Text: Extracted from the candidate's CV using Einstein's data parsing found from the Certification's section on the CV Document. Format: Write in Bullet Point Format\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "DOB" : {
+      "title" : "DOB",
+      "description" : "The Date Field to be populated with the Candidate's date of birth from the CV Document Format: YYYY-MM-DD IF there is no date of birth on the CV this can be ignored\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Education" : {
+      "title" : "Education",
+      "description" : "Data Type: Rich Text: Extracted from the candidate's CV using Einstein's data parsing found from the Education section on the CV Document. Format: Rich Text Bullet Point Institution Qualification Year Qualified Any other information mentioned like subjects, activities, affiliations etc\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "The Email to be populated with the Candidate's email address from the CV Document Format: Email\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "This is the Candidate__c record and the record's ID is to be pushed in to the recordId variable\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

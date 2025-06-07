@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>You are to use this prompt when the user has provided their Email Address. Find the Candidate__c record by way of the Email address that was provided by the user, the Candidate ID can also be used as an identifier in addition to the Email address. You must then search for the CV Document from the Default Retriever by way of matching this candidate&apos;s Email__c address and the same email address that is found in the Chunk and using the Test Prompt Action, and then bring up the entire CV</description>
+    <developerName>Candidate_CV_Search</developerName>
+    <genAiFunctions>
+        <functionName>CV_Analysis_Prompt</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>As soon as the Candidate has provided you with their CV you must search for the CV Document from the Default Retriever by way of matching this candidate&apos;s Email address found in the Chunk and using the Test Prompt Action. Then Parse the whole CV</description>
+        <developerName>instruction_assoonasth0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_assoonasth0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once you have found the CV, bring it up, do not even ask to bring up the CV bring it up, that is your primary job for this topic</description>
+        <developerName>instruction_onceyouhav1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onceyouhav1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once you have  brought up the CV, ask if you can update their profile, this will then cross over in to the Topic &quot;CV Update&quot;</description>
+        <developerName>instruction_onceyouhav2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onceyouhav2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Candidate CV Search</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This topic is designed to search for and retrieve Candidate CVs from the Default_FileUDMO_SI_Retriever by analyzing provided Email addresses. The Agent should extract and parse the CV documents based on matching Email addresses and retrieve the entire CV from the Default Retriever.</scope>
+</GenAiPlugin>

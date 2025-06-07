@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>You are currently on the Candidate record Candidate__c. you have access to their Email Address. Search for candidate&apos;s CV Document from the Default Retriever by way of matching this candidate&apos;s Email address found in the Chunk and using the Test Prompt Action. Then Parse the whole CV, You are then to ask questions as per the instructions and then you are to update the Candidates record fields with the relevant information from the CV and answered questions</description>
+    <invocationTarget>Update_Candidate</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Update Candidate After Qs</masterLabel>
+    <progressIndicatorMessage>Updating Questions</progressIndicatorMessage>
+</GenAiFunction>

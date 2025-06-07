@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:userInstructions" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:userInstructions" : {
+      "title" : "userInstructions",
+      "description" : "You are to find to find the Candidates CV by way of the inputted Email Address provided by the user. For example, the user will ask to bring up the CV document of \"name\" and Email \"Address\"",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

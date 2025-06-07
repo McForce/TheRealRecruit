@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Qualifying questions</fullName>
+                <default>false</default>
+                <label>Qualifying questions</label>
+            </value>
+            <value>
+                <fullName>Recruiter Review</fullName>
+                <default>false</default>
+                <label>Recruiter Review</label>
+            </value>
+            <value>
+                <fullName>Review candidate for Manager</fullName>
+                <default>false</default>
+                <label>Review candidate for Manager</label>
+            </value>
+            <value>
+                <fullName>To be reviewed by Hiring Manager</fullName>
+                <default>false</default>
+                <label>To be reviewed by Hiring Manager</label>
+            </value>
+            <value>
+                <fullName>Grad Interviews</fullName>
+                <default>false</default>
+                <label>Grad Interviews</label>
+            </value>
+            <value>
+                <fullName>Interviewing with hiring Manager</fullName>
+                <default>false</default>
+                <label>Interviewing with hiring Manager</label>
+            </value>
+            <value>
+                <fullName>Post hiring manager interview</fullName>
+                <default>false</default>
+                <label>Post hiring manager interview</label>
+            </value>
+            <value>
+                <fullName>Verifications Sent - pending</fullName>
+                <default>false</default>
+                <label>Verifications Sent - pending</label>
+            </value>
+            <value>
+                <fullName>Review Verifications</fullName>
+                <default>false</default>
+                <label>Review Verifications</label>
+            </value>
+            <value>
+                <fullName>Salary negotiations</fullName>
+                <default>false</default>
+                <label>Salary negotiations</label>
+            </value>
+            <value>
+                <fullName>Contract creation</fullName>
+                <default>false</default>
+                <label>Contract creation</label>
+            </value>
+            <value>
+                <fullName>Contract signed</fullName>
+                <default>false</default>
+                <label>Contract signed</label>
+            </value>
+            <value>
+                <fullName>Started</fullName>
+                <default>false</default>
+                <label>Started</label>
+            </value>
+            <value>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+                <label>Unsuccessful</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

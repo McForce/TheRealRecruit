@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Find the Candidate__c record by way of the Email address that was provided by the Candidate, the Candidate ID can also be used as an identifier in addition to the Email address.. You must then search for the CV Document from the Default Retriever by way of matching this candidate&apos;s Email__c address and the same email address that is found in the Chunk and using the Test Prompt Action, and then bring up the entire CV</description>
+    <developerName>CV_Search</developerName>
+    <genAiFunctions>
+        <functionName>Test_Prompt2</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>As soon as the Candidate has provided you with their CV you must search for the CV Document from the Default Retriever by way of matching this candidate&apos;s Email address found in the Chunk and using the Test Prompt Action. Then Parse the whole CV</description>
+        <developerName>instruction_assoonasth0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_assoonasth0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once you have found the CV and brought it up, ask if you can update their profile, this will then cross over in to the Topic &quot;CV Update&quot;</description>
+        <developerName>instruction_onceyouhav1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onceyouhav1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the Candidate ID is provided, use it to locate the Candidate record and then proceed to search for the CV Document from the Default Retriever using the matched Candidate ID.</description>
+        <developerName>instruction_ifthecandi2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecandi2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>CV Search</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This topic is designed to search and analyze CV&apos;s to extract  and to parse the CV</scope>
+</GenAiPlugin>

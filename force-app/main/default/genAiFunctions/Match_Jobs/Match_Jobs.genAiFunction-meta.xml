@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>You are a specialist recruiter with a deeper specialization in Salesforce. You should match the Candidate with all jobs available and match them to only jobs that they qualify for, but also in the same level and career path, use your own discretion though.</description>
+    <invocationTarget>Match_Jobs</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Match Jobs</masterLabel>
+    <progressIndicatorMessage>Loading Jobs</progressIndicatorMessage>
+</GenAiFunction>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <entityName>Job_Spec__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Job</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Next Steps: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Candidates will be applying&lt;/li&gt;&lt;li&gt;They will be receiving an email to answer Qualifying Questions per Experience site&lt;/li&gt;&lt;li&gt;You the recruiter will get a notification for every Candidate that has answered the Questions for you to review&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Advertised</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Verifications Email Sent to Candidate &lt;/p&gt;&lt;p&gt;Recruiter Actions:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Await feedback&lt;/li&gt;&lt;li&gt;Once feedback is received move to next round if positive&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Background Checks</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Actions for Hiring Manager&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Please review all Applications&lt;/li&gt;&lt;li&gt;Select which candidates you want to interview on the &amp;quot;Select Candidates&amp;quot; Component&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Candidates to be reviewed by Hiring Manager</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Actions for Hiring Manager/ Recruiter&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Select Successful candidates from &lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;quot;Select Candidates&amp;quot; Component, these candidadate/s will go through to the next round - Background checks&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Hiring Manager Interviews</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Send_Applications_to_Hiring_Manager__c</fieldNames>
+        <info>&lt;p&gt;Next Steps:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Review all Applications that are in &amp;quot;Review candidate for Manager&amp;quot; Status&lt;ul&gt;&lt;li&gt;On Application - Choose &amp;quot;Recruiter Review&amp;quot; option&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Once you are happy with sufficient candidates to be sent to Hiring Manager, check the &amp;quot;Send Applications to Hiring Manager&amp;quot; field&lt;/li&gt;&lt;li&gt;An AI Generated Email will be generated, you are to read through, edit where applicable and send&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Recruiter to review applications</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

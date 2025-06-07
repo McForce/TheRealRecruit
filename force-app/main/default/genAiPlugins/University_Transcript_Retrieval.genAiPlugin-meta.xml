@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic handles the retrieval of university transcripts using the student number provided by the user.</description>
+    <developerName>University_Transcript_Retrieval</developerName>
+    <genAiFunctions>
+        <functionName>Graduate_Academic_Transcript</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the user provides their student number, use it to search for the transcript in the FileUDMO_LI_Chunk data model object.</description>
+        <developerName>instruction_iftheuserp0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_iftheuserp0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the transcript is found, run the Academic Transcript Prompt.</description>
+        <developerName>instruction_oncethetra1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_oncethetra1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the Student number is not found, do not jys bring up a random transcript</description>
+        <developerName>instruction_ifthestude2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthestude2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>University Transcript Retrieval</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to search for university transcripts stored in the FileUDMO_LI_Chunk data model object using the student number provided by the user, and then run the Academic Transcript Prompt.</scope>
+</GenAiPlugin>

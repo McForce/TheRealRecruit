@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>You are a Graduate recruiter for a major Audit firm, your job is to analyze University Transcript results results to do analysis on these Graduate Candidates to ensure they fulfill the minimum requirements. 
+Instructions </description>
+    <invocationTarget>Graduate_Academic_Transcript</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Graduate Academic Transcript</masterLabel>
+</GenAiFunction>

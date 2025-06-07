@@ -1,0 +1,111 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Address" : {
+      "title" : "Address",
+      "description" : "The Address Field to be populated with the Candidate's Address from the CV Document Format:Address IF there is no address on the CV this can be ignored",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Certs" : {
+      "title" : "Certs",
+      "description" : "Data Type: Long Text: Extracted from the candidate's CV using Einstein's data parsing found from the Certification's section on the CV Document. Format: Write in Bullet Point Format",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "DOB" : {
+      "title" : "DOB",
+      "description" : "The Date Field to be populated with the Candidate's date of birth from the CV Document Format: YYYY-MM-DD IF there is no date of birth on the CV this can be ignored",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Education" : {
+      "title" : "Education",
+      "description" : "Data Type: Rich Text: Extracted from the candidate's CV using Einstein's data parsing found from the Education section on the CV Document. \nFormat: Rich Text Bullet Point\nInstitution\nQualification \nYear Qualified\nAny other information mentioned like subjects, activities, affiliations etc ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "The Email to be populated with the Candidate's email address from the CV Document Format: Email",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "FName" : {
+      "title" : "FName",
+      "description" : "The first Name/s of the Candidate found on their CV Document",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "LName" : {
+      "title" : "LName",
+      "description" : "The last Name of the Candidate found on their CV Document",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Languages" : {
+      "title" : "Languages",
+      "description" : "Data Type: Rich Text: Extracted from the candidate's CV using Einstein's data parsing found from the Certification's section on the CV Document. Format: text, seperated by , example: English, Spanish",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Phone" : {
+      "title" : "Phone",
+      "description" : "The phone to be populated with the Candidate's Phone/ Contact/ Mobile/ Phone Number from the CV Document Format: Phone",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Skills" : {
+      "title" : "Skills",
+      "description" : "Data Type: Long Text: Extracted from the candidate's CV using Einstein's data parsing found from the skills section on the CV Document. Format: Write in Bullet Point Format",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Socials" : {
+      "title" : "Socials",
+      "description" : "The Candidate's Socials found on their CV Document for Example Twitter, Github, Trailhead, LinkedIn Format: Example: LinkedIn: linkedin.com/in/toddthompson Trailhead: ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Summary" : {
+      "title" : "Summary",
+      "description" : "This is a summary of the Candidate done by the Agent, summarising their overall CV. Format: Long Text Example: This Candidate is a Salesforce Architect and has 7 years Professional working experience with 5 years in Salesforce, they have a degree in Computer Sciences and 5 Salesforce Certifications",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "VarDOB" : {
+      "title" : "VarDOB",
+      "description" : "The Date Field to be populated with the Candidate's date of birth from the CV Document Format: YYYY-MM-DD IF there is no date of birth on the CV this can be ignored",
+      "lightning:type" : "lightning__dateType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "WorkHistory" : {
+      "title" : "WorkHistory",
+      "description" : "Data Type: Rich Text: Extracted from the candidate's CV using Einstein's data parsing found from the Work/ Professional Experience section on the CV Document. Format: Rich Text \nTitle | Company Name | Location | Date from and To \nBullet point of their duties, Projects they worked on, Achievements and anything else they mentioned Reason for leaving if on CV",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "This is the Candidate__c record and the record's ID and is to be pushed in to the recordId variable",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

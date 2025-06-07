@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiPluginUtterances>
+        <developerName>utterance_canyouplea0</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_canyouplea0</masterLabel>
+        <utterance>Can you please generate the email for the hiring manager summarizing the Applicants</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>When the user asks you to generate an email for the hiring manager, you are to view all Applications related to the current Job_Spec__c you are on right now and summarise the applications</description>
+    <developerName>Send_Email_to_Hiring_Manager0</developerName>
+    <genAiFunctions>
+        <functionName>Email_To_Hiring_Manager</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__DraftOrReviseEmail</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Ask the user for any specific information or attachments that need to be included in the email.</description>
+        <developerName>instruction_asktheuser0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_asktheuser0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Confirm the details with the user before sending the email.</description>
+        <developerName>instruction_confirmthe1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_confirmthe1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Do not hallucinate Candidates, only summarise the Candidates / Applications that are related to this Job Spec</description>
+        <developerName>instruction_donothallu2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_donothallu2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Send the email to the Hiring Manager once the user confirms all the details.</description>
+        <developerName>instruction_sendtheema3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_sendtheema3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>The Job_Spec record ID is the record you are on right now</description>
+        <developerName>instruction_thejobspec4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_thejobspec4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>The Subject will be &quot;Candidates for review&quot;</description>
+        <developerName>instruction_thesubject5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_thesubject5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Use a professional tone and format for the email.</description>
+        <developerName>instruction_useaprofes6</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_useaprofes6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once you have drafted the summaries, ask if they are happy and then you can action the &quot;Draft or Revise Email&quot; Action</description>
+        <developerName>instruction_onceyouhav7</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onceyouhav7</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Send Email to Hiring Manager</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to draft and send an email to the Hiring Manager based on the user&apos;s request.</scope>
+</GenAiPlugin>

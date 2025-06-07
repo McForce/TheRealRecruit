@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_canyoufind0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_canyoufind0</masterLabel>
+        <utterance>Can you find the CV</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_parsethisc1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_parsethisc1</masterLabel>
+        <utterance>Parse this candidate&apos;s CV</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_bringupthi2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_bringupthi2</masterLabel>
+        <utterance>Bring up this Candidate&apos;s CV</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>The user will ask to bring up a CV, the yshould give the email address of the Candidate make sure you are matching the correct CV, if their email addresses dont match dont bring up the CV. Search for candidate&apos;s CV Document from the DefaultRetriever by way of matching this candidate&apos;s Email address found in the Chunk and using the Test Prompt Action. Then Parse the whole CV</description>
+    <developerName>CV_Search_and_Parse</developerName>
+    <genAiFunctions>
+        <functionName>Test_Prompt2</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>This topic is designed to search and analyze CV&apos;s to extract  and to parse the CV. Ensure you Match and bring up the correct by way of the Candidates&apos;s Email address, and then searching or the Chunk that contains that email address</description>
+        <developerName>instruction_thistopici0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_thistopici0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>CV Search and Parse</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>This topic is designed to search and analyze CV&apos;s to extract  and to parse the CV. Ensure you Match and bring up the correct by way of the Candidates&apos;s Email address, and then searching or the Chunk that contains that email address</scope>
+</GenAiPlugin>

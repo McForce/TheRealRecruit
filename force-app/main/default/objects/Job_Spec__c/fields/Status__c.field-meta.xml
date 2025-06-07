@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advertised</fullName>
+                <default>false</default>
+                <label>Advertised</label>
+            </value>
+            <value>
+                <fullName>Recruiter to review applications</fullName>
+                <default>false</default>
+                <label>Recruiter to review applications</label>
+            </value>
+            <value>
+                <fullName>Candidates to be reviewed by Hiring Manager</fullName>
+                <default>false</default>
+                <label>Candidates to be reviewed by Hiring Manager</label>
+            </value>
+            <value>
+                <fullName>Hiring Manager Interviews</fullName>
+                <default>false</default>
+                <label>Hiring Manager Interviews</label>
+            </value>
+            <value>
+                <fullName>Background Checks</fullName>
+                <default>false</default>
+                <label>Background Checks</label>
+            </value>
+            <value>
+                <fullName>Contract Negotiations</fullName>
+                <default>false</default>
+                <label>Contract Negotiations</label>
+            </value>
+            <value>
+                <fullName>Job Offer</fullName>
+                <default>false</default>
+                <label>Job Offer</label>
+            </value>
+            <value>
+                <fullName>Filled</fullName>
+                <default>false</default>
+                <label>Filled</label>
+            </value>
+            <value>
+                <fullName>Client Interviews</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client Interviews</label>
+            </value>
+            <value>
+                <fullName>Internal Interviewing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internal Interviewing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

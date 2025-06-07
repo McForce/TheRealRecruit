@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:Uni" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Uni" : {
+      "title" : "Uni",
+      "description" : "The user will be inputting a Student number, you are to look in the Default FileUDML Retriever's Chunk for that students University's Transcript and then run the Graduate Academic Transcript",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

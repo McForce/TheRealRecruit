@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</activeVersionIdentifier>
+    <developerName>Candidate_Files_Prompt</developerName>
+    <masterLabel>Candidate Files Prompt</masterLabel>
+    <templateVersions>
+        <content>You are a Recruitment Agent Specialising in recruiting School students. You received an image {!$RelatedList:Candidate.CombinedAttachments.Records} of a Student&apos;s final year&apos;s School results. You will notice all the subjects as well as the respective mark for each subject
+
+Instructions:
+&quot;&quot;&quot; 
+Analyze all the images and files provided, detailing the results per subject and calculate the average mark
+
+Did the candidate met minimum requirements for admission to bachelor&apos;s degree, diploma or higher certificate? 
+
+&quot;&quot;&quot;
+   
+Now, generate a response based on this evaluation.
+</content>
+        <inputs>
+            <apiName>Candidate</apiName>
+            <definition>SOBJECT://Candidate__c</definition>
+            <masterLabel>Candidate</masterLabel>
+            <referenceName>Input:Candidate</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Candidate.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>CombinedAttachments</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Candidate.CombinedAttachments.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a Recruitment Agent Specialising in recruiting School students. You received an image {!$RelatedList:Candidate.CombinedAttachments.Records} of a Student&apos;s final year&apos;s School results. You will notice all the subjects as well as the respective mark for each subject
+
+Instructions:
+&quot;&quot;&quot; 
+1.  Analyze all the images and files provided, detailing the results per subject 
+
+2.  Calculate the average mark (Just give the average)
+
+2. Did the candidate met minimum requirements for admission to bachelor&apos;s degree, diploma or higher certificate? 
+
+give the output in a flow formatted variable : {!}
+
+1. Results
+2. Average
+3. MinimumRequirements
+
+
+
+&quot;&quot;&quot;
+   
+Now, generate a response based on this evaluation.
+</content>
+        <inputs>
+            <apiName>Candidate</apiName>
+            <definition>SOBJECT://Candidate__c</definition>
+            <masterLabel>Candidate</masterLabel>
+            <referenceName>Input:Candidate</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Candidate.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>CombinedAttachments</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Candidate.CombinedAttachments.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

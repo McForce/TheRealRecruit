@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_10</activeVersionIdentifier>
+    <description>As a recruitment consultant, this prompt will be used to match the candidate to a Job and anlilize how good of a fit they are for this role</description>
+    <developerName>Update_Application_Prompt</developerName>
+    <masterLabel>Update Application Prompt</masterLabel>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze at the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+Application Rating: What would you score the applicant out of ten for this Job Spec
+Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+What makes applicant a good fit (for this specific job spec)
+What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze at the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+Application Rating: What would you score the applicant out of ten for this Job Spec, and push the answer in a Rating Variable
+Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking , and put the answer in a Overview Variable 
+What makes applicant a good fit (for this specific job spec), and put the answer in a GoodFit Variable 
+What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec and put the answer in a BadFit variable
+
+
+&quot;&quot;&quot;
+ 
+
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Draft</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze at the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+Application Rating: What would you score the applicant out of ten for this Job Spec
+Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+What makes applicant a good fit (for this specific job spec)
+What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+Application Rating: What would you score the applicant out of ten for this Job Spec
+Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+What makes applicant a good fit (for this specific job spec)
+What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+Does the candidate have all the Non negotiables, Answer with Yes or No. If no, what experience/ Qualifications are they lacking
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_4</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Certifications {!$Input:Application.Candidate__r.Certifications__c} Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History and work experience {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+Application Rating: What would you score the applicant out of ten for this Job Spec
+Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+What makes applicant a good fit (for this specific job spec)
+What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+Does the candidate have all the Non negotiables, Answer with Yes or No. If no, what experience/ Qualifications are they lacking. When a total number of years experience is required you must look in to their work history {!$Input:Application.Candidate__r.Work_History__c}
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_5</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Certifications {!$Input:Application.Candidate__r.Certifications__c} Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History and work experience {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+Application Rating: What would you score the applicant out of ten for this Job Spec
+Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+What makes applicant a good fit (for this specific job spec)
+What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+Does the candidate have all the Non negotiables per the Job {!$Input:Application.Job_Spec__r.Non_Negotiables__c}, Answer with Yes or No. If no, what experience/ Qualifications are they lacking. When a total number of years experience is required you must look in to their work history {!$Input:Application.Candidate__r.Work_History__c}
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_6</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Certifications {!$Input:Application.Candidate__r.Certifications__c} Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History and work experience {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+1. Application Rating: What would you score the applicant out of ten for this Job Spec?
+2. Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+3. What makes applicant a good fit (for this specific job spec)
+4. What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+5. List the Job&apos;s Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}, Does the candidate have all the Non negotiables per the Job, Answer with Yes or No. If no, what experience/ Qualifications are they lacking. When a total number of years experience is required you must look in to their work history {!$Input:Application.Candidate__r.Work_History__c}
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_7</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Certifications {!$Input:Application.Candidate__r.Certifications__c} Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History and work experience {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+1. Application Rating: What would you score the applicant out of ten for this Job Spec?
+2. Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+3. What makes applicant a good fit (for this specific job spec)
+4. What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+5. Does the candidate meet the minimum non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}, Answer with Yes or No. If no, give a summary of where they fell short. When a total number of years experience is required you must look in to their work history {!$Input:Application.Candidate__r.Work_History__c}
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_8</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Certifications {!$Input:Application.Candidate__r.Certifications__c} Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History and work experience {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+1. Application Rating: What would you score the applicant out of ten for this Job Spec {!$Input:Application.RecordType.Id}?
+2. Overview of Candidate: Give a short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+3. What makes applicant a good fit (for this specific job spec)
+4. What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+5. Does the candidate meet the minimum non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}, Answer with Yes or No. If no, give a summary of where they fell short. When a total number of years experience is required you must look in to their work history {!$Input:Application.Candidate__r.Work_History__c}, and look in Education {!$Input:Application.Candidate__r.Education__c}  if they require a certain qualification and certification {!$Input:Application.Candidate__r.Certifications__c} if they require certain certifications or an amount of certifications 
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_9</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Candidate and Job Spec that the Candidate applied to and match how good of a fit the Candidate is for this Job Spec
+
+Instructions:
+&quot;&quot;&quot;
+As a specialist recruiter, you will analyze the Candidate: {!$Input:Application.Candidate__r.Id}, you will compare their Education {!$Input:Application.Candidate__r.Education__c}, Certifications {!$Input:Application.Candidate__r.Certifications__c} Seniority Level {!$Input:Application.Candidate__r.Seniority_Level__c}, Career Title {!$Input:Application.Candidate__r.Career_Title__c}, Skills {!$Input:Application.Candidate__r.Skills__c}, Work History and work experience {!$Input:Application.Candidate__r.Work_History__c}, and you will evaluate them to the Job spec {!$Input:Application.Job_Spec__r.Id}, Industry Experience{!$Input:Application.Job_Spec__r.Industry__c}, The Job Title {!$Input:Application.Job_Spec__r.Job_Title__c}, Required experience {!$Input:Application.Job_Spec__r.Required_Experience__c}, Required Qualifications {!$Input:Application.Job_Spec__r.RequiredQualifications__c}, Required Skills {!$Input:Application.Job_Spec__r.Required_Skills__c}, The Perfect candidate {!$Input:Application.Job_Spec__r.The_Perfect_Candidate__c}, Non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}
+
+You will then go ahead based on your analysis and answer these questions 
+
+1. Application Rating: What would you score the applicant out of ten for this Job Spec {!$Input:Application.RecordType.Id}? if they dont meet the non negotiables  {!$Input:Application.Job_Spec__r.Non_Negotiables__c}, then give them a 0
+2. Overview of Candidate: Give a short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good candidate for the role, but also where they would be lacking  
+3. What makes applicant a good fit (for this specific job spec)
+4. What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec
+5. Does the candidate meet the minimum non Negotiables {!$Input:Application.Job_Spec__r.Non_Negotiables__c}, Answer with Yes or No. If no, give a summary of where they fell short. When a total number of years experience is required you must look in to their work history {!$Input:Application.Candidate__r.Work_History__c}, and look in Education {!$Input:Application.Candidate__r.Education__c}  if they require a certain qualification and certification {!$Input:Application.Candidate__r.Certifications__c} if they require certain certifications or an amount of certifications 
+
+for reference here are the record variables
+Application: {!$Input:Application.Id}
+recordId: {!$Input:Application.Candidate__r.Id}
+Job_Spec:{!$Input:Application.Job_Spec__r.Id}
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Application</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>Application</masterLabel>
+            <referenceName>Input:Application</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_10</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

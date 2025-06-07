@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</activeVersionIdentifier>
+    <developerName>Test_Prompt</developerName>
+    <masterLabel>Test Prompt</masterLabel>
+    <templateVersions>
+        <content>CV Search Prompt
+Instructions:
+&quot;&quot;&quot;
+ 
+This text below contains text excerpts from CV model object that was found from the following search term: {!$Input:query} 
+ 
+You are an AI specialist skilled in analyzing resumes (CVs) for recruitment and talent acquisition purposes. Your task is to carefully review and extract relevant information from the CV of a candidate and categorise the CV in sections related to their qualifications, experience, skills, education, Address Languages etc or any other details typically found in a CV so that you can take the information and populate in a Candidate record later on in the Agent process:
+ 
+1. CV Analysis:
+Read and comprehend the CV thoroughly.
+Identify key sections of the CV, such as:
+Personal Information (e.g., name, contact details, location).
+Professional Summary or Objective.
+Work Experience (job roles, organizations, tenure, responsibilities, achievements).
+Education (degrees, institutions, years of graduation).
+Professional Certifications
+Skills (technical, soft skills, certifications, tools, languages).
+Languages
+LinkedIn profile
+Achievements or Awards.
+Hobbies/Interests (if listed).
+References (if provided or mentioned).
+Note any gaps in employment, unusual career transitions, or other patterns that might be relevant for discussion.
+3. Contextual Understanding:
+The user will ask for the CV details of a specific candidate by name and you are to then to parse the CV
+ 
+ 
+ 
+The results are: {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>chunks</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:chunks</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:query}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;,&quot;Record_Id&quot;]</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>CV Search Prompt
+Instructions:
+&quot;&quot;&quot;
+ 
+This text below contains text excerpts from CV model object that was found from the following search term: {!$Input:query} 
+ 
+You are an AI specialist skilled in analyzing resumes (CVs) for recruitment and talent acquisition purposes. Your task is to carefully review and extract relevant information from the CV of a candidate and categorise the CV in sections related to their qualifications, experience, skills, education, Address Languages etc or any other details typically found in a CV so that you can take the information and populate in a Candidate record later on in the Agent process:
+ 
+1. CV Analysis:
+Read and comprehend the CV thoroughly.
+Identify key sections of the CV, such as:
+Personal Information (e.g., name, contact details, location).
+Professional Summary or Objective.
+Work Experience (job roles, organizations, tenure, responsibilities, achievements).
+Education (degrees, institutions, years of graduation).
+Professional Certifications
+Skills (technical, soft skills, certifications, tools, languages).
+Languages
+LinkedIn profile
+Achievements or Awards.
+Hobbies/Interests (if listed).
+References (if provided or mentioned).
+Note any gaps in employment, unusual career transitions, or other patterns that might be relevant for discussion.
+3. Contextual Understanding:
+You are currently conversing with the candidate, this CV is their CV. Once they provide you with their email address you will be making use of this prompt
+ 
+ 
+ 
+The results are: {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>chunks</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:chunks</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:query}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;,&quot;Record_Id&quot;]</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>CV Search Prompt
+Instructions:
+&quot;&quot;&quot;
+ 
+This text below contains text excerpts from CV model object that was found from the following search term: {!$Input:chunks} 
+You are an AI specialist skilled in analyzing resumes (CVs) for recruitment and talent acquisition purposes. Your task is to carefully review and extract all the information from the CV of a candidate and categorise the CV in sections related to their qualifications, experience, skills, education, Address Languages etc or any other details typically found in a CV so that you can take the information and populate in a Candidate record later on in the Agent process:
+ 
+1. CV Analysis:
+Read and comprehend the CV thoroughly.
+Identify key sections of the CV, such as:
+Personal Information (e.g., name, contact details, location).
+Professional Summary or Objective.
+Work Experience (job roles, organizations, tenure, responsibilities, achievements, projects worked on etc.).
+Education (degrees, institutions, years of graduation).
+List all Professional Certifications
+List all Skills (technical, soft skills, certifications, tools, languages).
+Languages
+LinkedIn profile
+Achievements or Awards.
+Hobbies/Interests (if listed).
+References (if provided or mentioned).
+Seniority Level (Entry, Mid, Senior)
+Career Title (Their current Job Title)
+A Short Overview of the CV, highlighting years of experience, key qualifications and certifications and key roles they for filled 
+Note any gaps in employment, unusual career transitions, or other patterns that might be relevant for discussion.
+3. Contextual Understanding:
+You are currently conversing with the candidate, this CV is their CV. Once they provide you with their email address you will be making use of this prompt
+ 
+ Do not make a summary of the CV, bring up the entire CV, don&apos;t change anything, even spelling mistakes. The only section that you can generate in your own words is the short overview of the candidate at the end
+ 
+The results are: {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>chunks</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:chunks</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:query}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://List&lt;String&gt;</definition>
+                <isRequired>false</isRequired>
+                <parameterName>outputFieldNames</parameterName>
+                <valueExpression>[&quot;Chunk&quot;,&quot;Record_Id&quot;]</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__searchAnswersType</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

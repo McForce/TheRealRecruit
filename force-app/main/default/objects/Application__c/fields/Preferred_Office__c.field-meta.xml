@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Office__c</fullName>
+    <label>Preferred Office</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cape Town</fullName>
+                <default>false</default>
+                <label>Cape Town</label>
+            </value>
+            <value>
+                <fullName>Stellenbosch</fullName>
+                <default>false</default>
+                <label>Stellenbosch</label>
+            </value>
+            <value>
+                <fullName>Worcester</fullName>
+                <default>false</default>
+                <label>Worcester</label>
+            </value>
+            <value>
+                <fullName>Robertson</fullName>
+                <default>false</default>
+                <label>Robertson</label>
+            </value>
+            <value>
+                <fullName>Gqeberha</fullName>
+                <default>false</default>
+                <label>Gqeberha</label>
+            </value>
+            <value>
+                <fullName>East London</fullName>
+                <default>false</default>
+                <label>East London</label>
+            </value>
+            <value>
+                <fullName>Durban</fullName>
+                <default>false</default>
+                <label>Durban</label>
+            </value>
+            <value>
+                <fullName>Pietermaritzburg</fullName>
+                <default>false</default>
+                <label>Pietermaritzburg</label>
+            </value>
+            <value>
+                <fullName>Bloemfontein</fullName>
+                <default>false</default>
+                <label>Bloemfontein</label>
+            </value>
+            <value>
+                <fullName>Mahikeng</fullName>
+                <default>false</default>
+                <label>Mahikeng</label>
+            </value>
+            <value>
+                <fullName>Kimberley</fullName>
+                <default>false</default>
+                <label>Kimberley</label>
+            </value>
+            <value>
+                <fullName>Nelspruit</fullName>
+                <default>false</default>
+                <label>Nelspruit</label>
+            </value>
+            <value>
+                <fullName>Emalahleni</fullName>
+                <default>false</default>
+                <label>Emalahleni</label>
+            </value>
+            <value>
+                <fullName>Waterfall</fullName>
+                <default>false</default>
+                <label>Waterfall</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiPluginUtterances>
+        <developerName>utterance_updatethis0</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_updatethis0</masterLabel>
+        <utterance>Update this Candidate</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_parsethisc1</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_parsethisc1</masterLabel>
+        <utterance>Parse this CV in to this candidate record</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_updatethis2</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_updatethis2</masterLabel>
+        <utterance>Update this record</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Locate the Candidate__c record using the provided Email address or Candidate ID. Retrieve the CV Document from the Default Retriever by matching the candidate&apos;s Email__c address. Use the Test Prompt Action to bring up the entire CV for further processing. Before you update the CV you are to first ask questions as per below instructions</description>
+    <developerName>CV_Update</developerName>
+    <genAiFunctions>
+        <functionName>Update_Candidate_two_point_O</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>For the Career_Goals__c field, find out from the  candidate what their career goals are, look at their current position title and according to what career path is their likely choice, for example, if they are a Developer, you would say something like I see you are currently a Developer ({Current Position Title}), do you see yourself going down the specialist Developer route or Architect (Possible salesforce career options from current position, and always give two possible options, the one going more of a functional route and the other more technical) route? (Take a look at the Recruitment guide in the data library for guidance)
+and populate the field according to their answer</description>
+        <developerName>instruction_forthecare0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_forthecare0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>For the Current_Total_Cost_To_Company__c field, ask them what their total cost to company is and populate accordingly</description>
+        <developerName>instruction_forthecurr1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_forthecurr1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>For the Prefer_Working_Inhouse_Or_Consulting__c field, ask the candidate if they would prefer working as a consultancy or inhouse/ directly for the client. Have a look at their current position, is it as consultant or inhouse, and start with I see you are currently working ({Consultant/ Inhouse}) then prod if they like to keep working as is or the other and populate the field accordingly</description>
+        <developerName>instruction_forthepref2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_forthepref2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>for the Reason_for_leaving_current_role__c field, populate from their last role if they did provide a reason
+If they did not provide a reason, ask them why they want to leave their current job and and populate the field accordingly</description>
+        <developerName>instruction_forthereas3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_forthereas3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>For the Seniority__c field, based on their current position and title and years of experience you can make your call weather they are Entry mid or Senior</description>
+        <developerName>instruction_fortheseni4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_fortheseni4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>for the Willing_to_work_Contract_Work__c field, ask them if they would be willing to do contract work and populate accordingly</description>
+        <developerName>instruction_forthewill5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_forthewill5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the CV is brought up, confirm with the candidate if they wish to update their profile. If they agree, proceed to the &apos;CV Update&apos; topic for further actions.</description>
+        <developerName>instruction_oncethecvi6</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_oncethecvi6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Dont ask the questions all at once, ask the question and let the user answer, and only ask the next question once the user has given the answer</description>
+        <developerName>instruction_dontaskthe7</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_dontaskthe7</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When you have completed the Update Candidate action, instruct the candidate to refresh the page. Once they have refreshed, inform them about the available jobs and ask which ones they would like to apply for by saying, &apos;I see we currently have a couple of jobs available that are a good fit for you. Would you like to apply for any of them?&apos;</description>
+        <developerName>instruction_whenyouhav8</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenyouhav8</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>CV Update</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to update the record you are on right now intelligently by populating the applicable fields from the CV that was parsed in the previous action. 
+Before updating the record, first ask the questions as per the instructions
+Do not use any other words other than than what is on the CV, except for the Summary field that you can use in your own words and always start this with total years of working experience.</scope>
+</GenAiPlugin>

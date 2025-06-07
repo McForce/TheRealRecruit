@@ -1,0 +1,24 @@
+{
+  "required" : [ "Input:Job" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Job" : {
+      "title" : "Job",
+      "description" : "List the jobs matched jobs",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Job_Spec__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

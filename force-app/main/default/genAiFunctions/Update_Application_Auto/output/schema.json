@@ -1,0 +1,69 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application" : {
+      "title" : "Application",
+      "description" : "This is the Application_c record that will be updated and is the Application variable and the specific Application from the Update Application Prompt\nFormat: 18 digit ID\nInput from the Update Application Prompt",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "BadFit" : {
+      "title" : "BadFit",
+      "description" : "What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec\nFormat: Long Text\nThe input is retrieved from the Update Application Prompt where it will say: What requirements/ Skills missing:",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "GoodFit" : {
+      "title" : "GoodFit",
+      "description" : "What makes applicant a good fit for this specific job spec\nFormat: Long Text\nThe input is retrieved from the Update Application Prompt where it will say: What makes applicant a good fit \n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Job_Spec that the Applicant applied\nFormat: 18 digit ID\nInput from the Update Application Prompt\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Overview" : {
+      "title" : "Overview",
+      "description" : "This is the Job_Spec that the Applicant applied\nFormat: 18 digit ID\nInput from the Update Application Prompt\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Rating" : {
+      "title" : "Rating",
+      "description" : "Application Rating: What would you score the applicant out of ten for this Job Spec\nFormat: Number\nThe input is retrieved from the Update Application Prompt where it will say: Application Rating:",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "This is the Candidate__c record Id that applied for the Job Spec\nFormat: 18 digit ID (not email address)\nInput from the Update Application Prompt \nInput:Application.Candidate__r.Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

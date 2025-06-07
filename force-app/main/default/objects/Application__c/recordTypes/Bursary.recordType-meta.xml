@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bursary</fullName>
+    <active>true</active>
+    <label>Bursary</label>
+    <picklistValues>
+        <picklist>Application_Type__c</picklist>
+        <values>
+            <fullName>Full Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bursary_Status__c</picklist>
+        <values>
+            <fullName>Administer assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ai Agent Screening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Calculate bursary offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capture%2Fupdate system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contracts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process results</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regret</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen%2FReview applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set up assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set up interviews</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update results%2FPOR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Graduate_Type__c</picklist>
+        <values>
+            <fullName>Bursary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non Bursary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hiring_Manager_Interview_Decline__c</picklist>
+        <values>
+            <fullName>Decline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interview</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_Office__c</picklist>
+        <values>
+            <fullName>Bloemfontein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cape Town</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durban</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emalahleni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gqeberha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kimberley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mahikeng</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nelspruit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pietermaritzburg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robertson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stellenbosch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waterfall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worcester</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Recruiter_Review__c</picklist>
+        <values>
+            <fullName>Bad Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need Clarifying Questions set up a call</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Second_preferred_office__c</picklist>
+        <values>
+            <fullName>Bloemfontein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cape Town</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durban</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emalahleni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gqeberha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kimberley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mahikeng</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nelspruit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pietermaritzburg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robertson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stellenbosch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waterfall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worcester</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Advertise and Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer %26 Maintain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set up Assessments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set up interviews</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Contract creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grad Interviews</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualifying questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruiter Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Verifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsuccessful</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verifications Sent - pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

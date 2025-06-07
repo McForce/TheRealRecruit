@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>When the user asks you to match them to the Job Spec they applied for</description>
+    <developerName>Match_Candidate_to_Job</developerName>
+    <genAiFunctions>
+        <functionName>Update_Application_Auto_5</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>All you have to do is run the Update Application Prompt when the user asks if you can match the candidate to the job spec they applied for</description>
+        <developerName>instruction_allyouhave0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_allyouhave0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Match Candidate to Job</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>You will be analyzing the candidate and the job they applied for</scope>
+</GenAiPlugin>

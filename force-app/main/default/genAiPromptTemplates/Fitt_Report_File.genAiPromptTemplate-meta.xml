@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>Fitt_Report_File</developerName>
+    <masterLabel>Fitt Report File</masterLabel>
+    <templateVersions>
+        <content>FITT Results Search Prompt
+Instructions:
+&quot;&quot;&quot;
+ 
+This text below contains text excerpts that was found from the following search term:  that is the Applicant&apos;s Name and Email Address
+This is from an assessment the applicant has completed, and the text exert are the results  {!$RelatedList:Case.CombinedAttachments.Records}
+
+
+You are an AI Recruitment specialist skilled in analyzing the FITT results of the Applicant. Your task is to carefully review and extract all the information from the Fitt Results of an applicant and retrieving the overall score from the Talent Dashboard section as well as Each score per Competency, and listing them under:  Core Competencies, Enabling Competencies, Leadership Competencies, Forward Looking Competencies
+
+Under the Work Preferences Section, list the Team Role Preferences and the Employee Experience Drivers, you will find these numbered with a #, and there are only 3 per Preference. The choices for Employee Experience Drivers are: Collaboration and Teamwork, Advancement and Career Progression, Organizational Purpose and Brand, Autonomy and Individuality, Growth and Learning, Wellness and Work Life Integration, Communication and Clarity, Recognition and Incentive, Environment and eco-system, Community and Belonging. The Team Roles are, Innovator, Chair, Driver, Critic, Networker, Perfectionist, Team Player, Implementer. So where you see one of these with a #&quot;number&quot; before them, you know these are one of the preferences 
+
+The results are:
+</content>
+        <inputs>
+            <apiName>Fitt</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>Fitt</masterLabel>
+            <referenceName>Input:Fitt</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Case</apiName>
+            <definition>SOBJECT://Case</definition>
+            <masterLabel>Case</masterLabel>
+            <referenceName>Input:Case</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultVertexAIGemini20FlashLite001</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>invocable://getRelatedList</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>parentRecordId</parameterName>
+                <valueExpression>{!$Input:Case.Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>relatedListName</parameterName>
+                <valueExpression>CombinedAttachments</valueExpression>
+            </parameters>
+            <referenceName>RelatedList:Case.CombinedAttachments.Records</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

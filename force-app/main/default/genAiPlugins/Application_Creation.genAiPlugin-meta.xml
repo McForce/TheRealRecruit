@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiPluginUtterances>
+        <developerName>utterance_pleasecrea0</developerName>
+        <language>en_US</language>
+        <masterLabel>utterance_pleasecrea0</masterLabel>
+        <utterance>Please create the Applications</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Handles the creation of applications based on recommended candidates.</description>
+    <developerName>Application_Creation</developerName>
+    <genAiFunctions>
+        <functionName>Create_Applications_2</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Ensure that the application is created accurately based on the provided candidate information.</description>
+        <developerName>instruction_ensurethat0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ensurethat0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Take all the Email Addresses provided in the Previous Prompts and put in the EmailAddress Variable</description>
+        <developerName>instruction_takeallthe1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_takeallthe1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Application Creation</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to create applications from the recommended candidates when requested by the user.</scope>
+</GenAiPlugin>

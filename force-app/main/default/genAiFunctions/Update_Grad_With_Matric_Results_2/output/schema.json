@@ -1,0 +1,42 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Average" : {
+      "title" : "Average",
+      "description" : "This is the Average that was given to you by the user, you are to update the Matric_Average__c field",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "CandidateId" : {
+      "title" : "CandidateId",
+      "description" : "The Candidate Id you are to update",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "MinimumRequirements" : {
+      "title" : "MinimumRequirements",
+      "description" : "The User will indicate whether the candidate met minimum requirements for admission to bachelor's degree, diploma or higher certificate? You are to update the Matric_Exemption__c field with this output",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "Results" : {
+      "title" : "Results",
+      "description" : "\nThese are the Matric results provided to you by the user, you are to update the Matric_Results__c field with this output Format: Long Text field bullet each subject Example - Subject A: % - Subject B: % - Subject C: ",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

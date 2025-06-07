@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This email is generated once the user asks you to generate the Email to send to the Hiring manager summarising the Candidates</description>
+    <invocationTarget>Email_To_Hiring_Manager</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Email To Hiring Manager</masterLabel>
+    <progressIndicatorMessage>Generating Email</progressIndicatorMessage>
+</GenAiFunction>

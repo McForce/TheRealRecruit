@@ -1,0 +1,83 @@
+{
+  "required" : [ "CTC", "CTCBreakdown", "CandidateSpecificQuestions", "CareerGoals", "QuestionsAndAnswers", "ReasonForLeaving" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application_Code" : {
+      "title" : "Application_Code",
+      "description" : "Format: 5 digit number, found on the Application record Application_Code__c field This is the unique identifier of the Application record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "CTC" : {
+      "title" : "CTC",
+      "description" : "Format: Text field but the Candidate will give a Currency format. This is their total cost to company. user's input should be populated on the Cost_To_Company__c field on the Candidate__c record\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CTCBreakdown" : {
+      "title" : "CTCBreakdown",
+      "description" : "Format: Text This is a breakdown of what is included in their Cost To Company Example, Basic Salary: R50000, Medical: Aid R1000, Pension: R5000 And if they are getting a Bonus or not.\nuser's input should be populated on the Cost_To_Company_Breakdown__c field on the Candidate__c record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Candidate" : {
+      "title" : "Candidate",
+      "description" : "This is the Candidate__c record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Candidate__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "CandidateSpecificQuestions" : {
+      "title" : "CandidateSpecificQuestions",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Candidate Specific Questions field and answers by the Candidate for these questions specifically and the answers should be populated on the Candidate__c record on the following fields: \nThe Career Goals to be populated on the Career Goals field\nCost to Company on the Cost to Company field\nCost To Company Breakdown on the Cost To Company Breakdown field\nReason for leaving current role on the Reason for leaving current role field",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "CareerGoals" : {
+      "title" : "CareerGoals",
+      "description" : "Format: Text These are the Candidate's Career goals and to be populated on the Career_Goals__c field on the Candidate__c record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "Email" : {
+      "title" : "Email",
+      "description" : "Format: Email This is the Email Address the Candidate typed when they started their chat. This is the unique identifier if the Candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Job_Spec__c record",
+      "lightning:type" : "lightning__recordInfoType",
+      "lightning:sObjectInfo" : {
+        "apiName" : "Job_Spec__c"
+      },
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "QuestionsAndAnswers" : {
+      "title" : "QuestionsAndAnswers",
+      "description" : "These are the Questions asked by you from the Job Spec Record from the Questions to ask field and answers by the Candidate for these questions specifically",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "ReasonForLeaving" : {
+      "title" : "ReasonForLeaving",
+      "description" : "This is the Reason for leaving provided by the candidate and to be populated in the Reason_For_Leaving__c field on the Candidate record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

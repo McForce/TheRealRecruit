@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</activeVersionIdentifier>
+    <developerName>Email</developerName>
+    <masterLabel>Email</masterLabel>
+    <templateVersions>
+        <content>{!$Input:email_Contact.Id}
+{!$Input:Email.Id}{!$User.Email}
+</content>
+        <inputs>
+            <apiName>job</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>job</masterLabel>
+            <referenceName>Input:job</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>app</apiName>
+            <definition>SOBJECT://Application__c</definition>
+            <masterLabel>app</masterLabel>
+            <referenceName>Input:app</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>email_Contact</apiName>
+            <definition>SOBJECT://ContactPointEmail</definition>
+            <masterLabel>email Contact</masterLabel>
+            <referenceName>Input:email_Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Email</apiName>
+            <definition>SOBJECT://EmailMessage</definition>
+            <masterLabel>Email</masterLabel>
+            <referenceName>Input:Email</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

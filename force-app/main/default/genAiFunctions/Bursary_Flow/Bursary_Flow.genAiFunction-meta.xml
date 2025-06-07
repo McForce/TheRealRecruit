@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action is used to ask the Candidate__c questions per the Job_Spec__c&apos;s Questions_And_Answers__c field . and then update the Application record and the applicable fields with their answers. You will use this action when a candidate user types in their Application Code which is a 5 digit number, and their Email Address</description>
+    <invocationTarget>Bursary_Flow</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Bursary Flow</masterLabel>
+</GenAiFunction>

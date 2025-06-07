@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>When the user asks you to update the candidate record with the Academic Transcript information</description>
+    <developerName>Academic_Transcript_Updates</developerName>
+    <genAiFunctions>
+        <functionName>Academic_Transcript_Update_Candidate_Auto</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>For the Academic_Results__c field, ensure you copy exactly per the prompt, the Bullet points the spacing everything</description>
+        <developerName>instruction_fortheacad0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_fortheacad0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the transcript is not available, inform the candidate and offer to escalate the request to an agent.</description>
+        <developerName>instruction_ifthetrans1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthetrans1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>For the Academic Results field follow the following format Rich Text 
+List the Year/ Term | Program of study, linebreak List of Subject and results for that term, Line Break Repeat</description>
+        <developerName>instruction_fortheacad2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_fortheacad2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Academic Transcript Updates</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to provide candidates with their academic transcript information upon request and then updating the Candidate record</scope>
+</GenAiPlugin>

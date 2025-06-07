@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_9</activeVersionIdentifier>
+    <developerName>Job_Spec_Search_Candidates</developerName>
+    <masterLabel>Job Spec Search Candidates</masterLabel>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database that is a Unstructured Data Model Object of the Chunks of Candidate CV&apos;s, in these chunks you will find the candidates, and return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Location proximity or willingness to relocate
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Contact Info
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 70% of the job requirements.
+
+The results are{!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Job_Spec.Job_Description__c}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database that is a Unstructured Data Model Object of the Chunks of Candidate CV&apos;s, in these chunks you will find the candidates, and return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Location proximity or willingness to relocate
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Contact Info
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates 
+
+The results are {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Job_Spec.Job_Description__c}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database that is a Unstructured Data Model Object of the Chunks of Candidate CV&apos;s, in these chunks you will find the candidates, and return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Location proximity or willingness to relocate
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Contact Info
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+The results are {!$EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7.results}
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Job_Spec.Job_Description__c}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_FileUDMO_SI_Retriever_1Cx_Lncd67d59b7</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_3</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database found in this flow {!$Flow:Get_Candidates_In_Database.Prompt} then return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_In_Database</definition>
+            <referenceName>Flow:Get_Candidates_In_Database</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_4</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database found in this flow {!$Flow:Get_Candidates_In_Database.Prompt} then return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Email Address (Put in EmailAddresses Variable)
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_In_Database</definition>
+            <referenceName>Flow:Get_Candidates_In_Database</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_5</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database found in this flow {!$Flow:Get_Candidates_In_Database.Prompt} then return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Email Address (The Candidate Already signed that you can view their Email Address, so dont hide it) 
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_In_Database</definition>
+            <referenceName>Flow:Get_Candidates_In_Database</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_6</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database found in this flow {!$Flow:Get_Candidates_In_Database.Prompt} then return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Email Address (The Candidate Already signed that you can view their Email Address, so dont hide it)  (put these Email Address in the Collection text Variable called EmailAddress)
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_In_Database</definition>
+            <referenceName>Flow:Get_Candidates_In_Database</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_7</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database found in this flow {!$Flow:Get_Candidates_In_Database.Prompt} then return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Email Address (The Candidate Already signed that you can view their Email Address, so dont hide it)  (put these Email Address in the Collection text Variable called EmailAddress)
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+List all email addresses in comma separated values in the following variable &apos;EmailAddress&apos;  
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_In_Database</definition>
+            <referenceName>Flow:Get_Candidates_In_Database</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_8</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database found in this flow {!$Flow:Get_Candidates_In_Database.Prompt} then return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Email Address 
+Contact Number
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_In_Database</definition>
+            <referenceName>Flow:Get_Candidates_In_Database</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_9</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a specialist recruiter in the tech industry and you are to analyze the Job_Spec {!$Input:Job_Spec.Id} and find that the best Candidates that might be suitable for this role
+
+&quot;&quot;&quot;
+
+
+A new job specification has been created with the following details: 
+Job Title: {!$Input:Job_Spec.Job_Title__c}
+Job Description and duties: {!$Input:Job_Spec.Job_Description__c}
+Required Skills: {!$Input:Job_Spec.Required_Skills__c}
+Experience Level: {!$Input:Job_Spec.Seniority_Level__c}
+Education and certification Requirements: {!$Input:Job_Spec.RequiredQualifications__c}
+Required Experience: {!$Input:Job_Spec.Required_Experience__c}
+Industry Experience: {!$Input:Job_Spec.Industry__c}, {!$Input:Job_Spec.Industries_Worked_in__c}
+
+Search the candidate database found in this flow {!$Flow:Get_Candidates_In_Database.Prompt} then return the top matching candidates based on:
+Skill match (hard and soft skills)
+Years of relevant experience
+Education and certifications
+Previous job titles and industries
+Candidate availability
+Rank the candidates by relevance score (from 1–100), provide a brief reason for the match, and return their:
+Full Name
+Email Address (Email field)
+Phone Number (Phone field)
+Resume Summary
+Match Score
+Key Matching Criteria
+Only return candidates who meet at least 60% of the job requirements.
+Return at least 3 Candidates
+Ensure you only return records that have full names
+
+
+&quot;&quot;&quot;
+ 
+Now create the response
+</content>
+        <inputs>
+            <apiName>Job_Spec</apiName>
+            <definition>SOBJECT://Job_Spec__c</definition>
+            <masterLabel>Job Spec</masterLabel>
+            <referenceName>Input:Job_Spec</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4Turbo</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>flow://Get_Candidates_In_Database</definition>
+            <referenceName>Flow:Get_Candidates_In_Database</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>IhDyA9IladXjzGaD4lhqYmT3KEtOlaXmW7tLL01u9L0=_10</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

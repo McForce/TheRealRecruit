@@ -1,0 +1,55 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Application" : {
+      "title" : "Application",
+      "description" : "This is the Application_c record that will be updated and is the Application variable and the specific Application from the Update Application Prompt Format: 18 digit ID \nThe Input was given by the user: Application Record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "BadFit" : {
+      "title" : "BadFit",
+      "description" : "What requirements/ Skills missing: where might this candidate possibly be missing or lacking for this specific job spec Format: Long Text The input is retrieved from the Update Application Prompt where it will say: What requirements/ Skills missing:",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "GoodFit" : {
+      "title" : "GoodFit",
+      "description" : "What makes applicant a good fit for this specific job spec Format: Long Text The input is retrieved from the Update Application Prompt where it will say: What makes applicant a good fit",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Job_Spec" : {
+      "title" : "Job_Spec",
+      "description" : "This is the Job_Spec that the Applicant applied for, and is related to their Applicant record \nFormat: 18 digit ID Input was from the user Job Spec ID",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Overview" : {
+      "title" : "Overview",
+      "description" : "Overview of Candidate: Give an short overview of the Candidate highlighting the number of years experience, overview of their job history, and anything else that would make this a good Format: Long Text The input is retrieved from the Update Application Prompt where it will say: Overview of Candidate:",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Rating" : {
+      "title" : "Rating",
+      "description" : "Application Rating: What would you score the applicant out of ten for this Job Spec Format: Number The input is retrieved from the Update Application Prompt where it will say: Application Rating:",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "recordId" : {
+      "title" : "recordId",
+      "description" : "This is the Candidate__c record. supplied by the user (Candidate record ID) Format: 18 digit ID (not email address) \nThe recordId input is found from the Update Application Auto 3 0 Output",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

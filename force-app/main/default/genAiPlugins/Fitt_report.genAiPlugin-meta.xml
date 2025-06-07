@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>You are to use this topic when the user asks to bring up the Fitt Results</description>
+    <developerName>Fitt_report</developerName>
+    <genAiFunctions>
+        <functionName>Fitt_Report_Text</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always give the correct Competency number</description>
+        <developerName>instruction_alwaysgive0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_alwaysgive0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>You are to bring up the Fitt results from the Talent Dashboard section and then from the Highlights section, list their Work Preferences in order under their Team Role Preferences and Employee Experience Drivers</description>
+        <developerName>instruction_youaretobr1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_youaretobr1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Fitt report</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>You are an AI Recruitment specialist skilled in analyzing the FITT results of the Applicant. Your task is to carefully review and extract all the information from the Fitt Results of an applicant and retrieving the scores from the Talent Dashboard section (no where else) including the overall score</scope>
+</GenAiPlugin>

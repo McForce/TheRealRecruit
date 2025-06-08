@@ -1,9 +1,374 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.4">
   <diagram name="Page-1" id="qZBypQwJ1ffwHdbOw9Ls">
-    <mxGraphModel>
+    <mxGraphModel dx="996" dy="1753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-1" target="CIJIQ-VZuIDvAZ526HDg-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-1" value="Data Cloud Triggered Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.888;exitY=1.062;exitDx=0;exitDy=0;exitPerimeter=0;curved=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-2" target="CIJIQ-VZuIDvAZ526HDg-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-2" value="AI Grounding Screen Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-3" target="CIJIQ-VZuIDvAZ526HDg-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-3" value="Prompts Invokable Agent" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-4" target="CIJIQ-VZuIDvAZ526HDg-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-4" value="Search CV Agent Action" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="325" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-5" target="CIJIQ-VZuIDvAZ526HDg-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-5" value="Runs the CV Analysis Prompt" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-6" target="CIJIQ-VZuIDvAZ526HDg-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-6" value="Runs Candidate Record Update Agent Action" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-7" target="CIJIQ-VZuIDvAZ526HDg-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="969.666666666667" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-7" value="Runs Update Candidate Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="325" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-8" target="CIJIQ-VZuIDvAZ526HDg-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-8" value="Candidate Object" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-9" target="CIJIQ-VZuIDvAZ526HDg-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-9" target="CIJIQ-VZuIDvAZ526HDg-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-9" target="CIJIQ-VZuIDvAZ526HDg-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-9" value="UDMO record Creation (CV pdf)&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-14" target="CIJIQ-VZuIDvAZ526HDg-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-14" value="Triggers Update Application RTF" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-18" target="CIJIQ-VZuIDvAZ526HDg-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-18" value="Pauses a Minute" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-19" target="CIJIQ-VZuIDvAZ526HDg-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-19" value="Get Application" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-20" target="CIJIQ-VZuIDvAZ526HDg-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-20" value="Invoke&amp;nbsp;&amp;nbsp;Match Candidate to Job Agent Action" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="445" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-21" target="CIJIQ-VZuIDvAZ526HDg-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-21" value="Run Update Application Prompt Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-22" target="CIJIQ-VZuIDvAZ526HDg-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-22" value="Invokes Update Application Prompt" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-23" value="Flex Prompt Template: inputs Applicant" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="562.5" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-24" value="finds the CV that is found from FileUDMO retriever from Email Address" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="515" y="260" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-25" target="CIJIQ-VZuIDvAZ526HDg-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-25" value="Invokes Update Application Agent Action" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-26" target="CIJIQ-VZuIDvAZ526HDg-81">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="579.8461538461538" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-26" value="Runs Update Application Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-54" target="CIJIQ-VZuIDvAZ526HDg-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-54" value="Create Job Spec" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-55" target="CIJIQ-VZuIDvAZ526HDg-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-55" value="Ask Agent find Best Suited Candidates" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-56" target="CIJIQ-VZuIDvAZ526HDg-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-56" value="Job Spec Search Candidates Agent Action" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-57" target="CIJIQ-VZuIDvAZ526HDg-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-57" value="Job Spec Search Candidates Prompt" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-58" value="Flex Template: Job Spec" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="565" y="-400" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-63" target="CIJIQ-VZuIDvAZ526HDg-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-63" value="Candidate Applies through Linked In" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-64" target="CIJIQ-VZuIDvAZ526HDg-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-64" value="Candidate Record Created: Name, Email" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-65" target="CIJIQ-VZuIDvAZ526HDg-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-65" value="Application Record Created: Name, Candidate, Job Spec" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-66" target="CIJIQ-VZuIDvAZ526HDg-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-66" value="CV Document send to Amazon S3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-67" target="CIJIQ-VZuIDvAZ526HDg-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-67" value="CV Document send to Amazon S3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-68" target="CIJIQ-VZuIDvAZ526HDg-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-68" value="CV Document Data Cloud&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-81" target="CIJIQ-VZuIDvAZ526HDg-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-86" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CIJIQ-VZuIDvAZ526HDg-85">
+          <mxGeometry x="-0.1111" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-81" target="CIJIQ-VZuIDvAZ526HDg-84">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="530" />
+              <mxPoint x="1150" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-88" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CIJIQ-VZuIDvAZ526HDg-87">
+          <mxGeometry x="0.4948" y="4" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-81" value="Does Candidate Meet Minimim Requirementd" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="705" y="520" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-82" target="CIJIQ-VZuIDvAZ526HDg-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-82" value="Updates Application fields and Status: Qualifying questions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-84" value="Updates Application fields and Status Unsuccessful" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-91" target="CIJIQ-VZuIDvAZ526HDg-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-91" value="Triggers&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;Application RTF Create and update Flow&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-93" target="CIJIQ-VZuIDvAZ526HDg-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-93" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Send Email to Candidate&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-94" target="CIJIQ-VZuIDvAZ526HDg-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-94" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Candidate Clicks on Link lands on Recruitment Experience Site&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-95" target="CIJIQ-VZuIDvAZ526HDg-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-95" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Candidate Must Provide Email Address and Unique Code to Agent&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-96" target="CIJIQ-VZuIDvAZ526HDg-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-96" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Triggers&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Full Time Questions and Answers Agent Topic&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-97" value="McForce Recruitment Agent" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="355" y="650" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-98" target="CIJIQ-VZuIDvAZ526HDg-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-98" value="Agent Asks questions on Job Spec record and Candidate must answer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-101" target="CIJIQ-VZuIDvAZ526HDg-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-101" value="Runs&amp;nbsp;Application Questions and Answers Auto Action&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%26lt%3Bdiv%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bbackground-color%3A%20transparent%3B%20color%3A%20light-dark(rgb(0%2C%200%2C%200)%2C%20rgb(255%2C%20255%2C%20255))%3B%26quot%3B%26gt%3BTriggers%26amp%3Bnbsp%3B%26lt%3B%2Fspan%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bbackground-color%3A%20transparent%3B%26quot%3B%26gt%3BFull%20Time%20Questions%20and%20Answers%20Agent%20Topic%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22190%22%20y%3D%22710%22%20width%3D%22120%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-102" target="CIJIQ-VZuIDvAZ526HDg-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-102" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Triggers&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Full Time Questions and Answers Agent Topic&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-103" target="CIJIQ-VZuIDvAZ526HDg-104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-103" value="Triggers&amp;nbsp;Application Questions and Answers Auto Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-104" target="CIJIQ-VZuIDvAZ526HDg-108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-104" value="Update The Candidate and Application Record" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-106" target="CIJIQ-VZuIDvAZ526HDg-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-106" value="Candidate gets Notification to review Candidate" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-108" target="CIJIQ-VZuIDvAZ526HDg-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-108" value="Triggers&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;Application Update RTF&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-109" target="CIJIQ-VZuIDvAZ526HDg-110">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-109" value="Recruiter reviews Application&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-110" target="CIJIQ-VZuIDvAZ526HDg-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-110" value="Good/ Bad Fit" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="910" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-111" target="CIJIQ-VZuIDvAZ526HDg-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-111" value="Application Status: To be reviewed by Hiring Manager" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="1090" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-112" target="CIJIQ-VZuIDvAZ526HDg-121">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-112" value="Recruiter Selects:&amp;nbsp;Send Applications to Hiring Manager on Job Spec Record&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="1085" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-113" target="CIJIQ-VZuIDvAZ526HDg-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-120" value="Bad Fit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CIJIQ-VZuIDvAZ526HDg-117">
+          <mxGeometry x="0.0795" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-113" value="Triggers&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;Application Update RTF&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.022;entryY=0.134;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-113" target="CIJIQ-VZuIDvAZ526HDg-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-115" value="Good Fit" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="CIJIQ-VZuIDvAZ526HDg-114">
+          <mxGeometry x="-0.0456" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-116" value="Application Status: Unsuccessful&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1090" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-121" target="CIJIQ-VZuIDvAZ526HDg-122">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-121" value="Screen Flow becomes visible through Record Page filter" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="725" y="1090" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-122" target="CIJIQ-VZuIDvAZ526HDg-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-122" value="Email to Hiring Manager SF Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1090" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-123" target="CIJIQ-VZuIDvAZ526HDg-124">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-123" value="Email to Hiring Manager SF Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-124" target="CIJIQ-VZuIDvAZ526HDg-126">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-124" value="Calls &quot;Email To Hiring Manager&quot; Prompt&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-125" value="Flex Prompt Template: inputs Job Spec" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="715" y="1180" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-126" value="Send Email with the Prompt to Hiring Manager" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="555" y="1220" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

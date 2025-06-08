@@ -48,7 +48,7 @@
         <mxCell id="CIJIQ-VZuIDvAZ526HDg-7" value="Runs Update Candidate Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="910" y="325" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="CIJIQ-VZuIDvAZ526HDg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-8" target="CIJIQ-VZuIDvAZ526HDg-3">
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-8" target="CIJIQ-VZuIDvAZ526HDg-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="CIJIQ-VZuIDvAZ526HDg-8" value="Candidate Object" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -245,11 +245,11 @@
         <mxCell id="CIJIQ-VZuIDvAZ526HDg-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-96" target="CIJIQ-VZuIDvAZ526HDg-102">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CIJIQ-VZuIDvAZ526HDg-96" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Triggers&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Full Time Questions and Answers Agent Topic&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-96" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Full Time Questions and Answers Agent Topic&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="710" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="CIJIQ-VZuIDvAZ526HDg-97" value="McForce Recruitment Agent" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="355" y="650" width="150" height="35" as="geometry" />
+          <mxGeometry x="350" y="660" width="150" height="35" as="geometry" />
         </mxCell>
         <mxCell id="CIJIQ-VZuIDvAZ526HDg-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-98" target="CIJIQ-VZuIDvAZ526HDg-101">
           <mxGeometry relative="1" as="geometry" />
@@ -266,7 +266,7 @@
         <mxCell id="CIJIQ-VZuIDvAZ526HDg-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-102" target="CIJIQ-VZuIDvAZ526HDg-98">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="CIJIQ-VZuIDvAZ526HDg-102" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Triggers&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Full Time Questions and Answers Agent Topic&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="CIJIQ-VZuIDvAZ526HDg-102" value="Application with Job And Candidate record found" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="830" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="CIJIQ-VZuIDvAZ526HDg-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CIJIQ-VZuIDvAZ526HDg-103" target="CIJIQ-VZuIDvAZ526HDg-104">

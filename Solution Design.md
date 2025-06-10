@@ -1,3 +1,36 @@
+Solution Design: Job Spec Search Candidates (AI-Driven Candidate Search in Salesforce ATS)
+1. Overview
+This section describes the technical design for the AI-powered function that finds the most applicable candidates for a given Job Spec within the Salesforce Applicant Tracking System (ATS). This genAIFunction leverages AI prompt orchestration to search and rank candidates based on their suitability for an open job requisition.
+
+2. Key Component
+2.1 Job_Spec_Search_Candidates GenAIFunction
+File: genAiFunctions/Job_Spec_Search_Candidates/Job_Spec_Search_Candidates.genAiFunction-meta.xml
+Purpose:
+AI-driven search to identify and surface the most suitable candidates for a specific Job Spec. The process leverages AI to analyze candidate records and match them to the requirements and preferences of the job spec.
+Invocation Target:
+Type: generatePromptResponse (AI prompt, not a flow)
+Name: Job_Spec_Search_Candidates
+User Experience:
+No explicit user confirmation is required to execute the search.
+A progress indicator ("Searching Database") is shown while the process runs, improving UX for potentially long-running or complex searches.
+Description Excerpt:
+Find the most applicable Candidates for this Job
+
+3. Process Flow
+Input:
+The genAIFunction receives the Job Spec as its primary context.
+AI Processing:
+The AI agent analyzes the Job Spec’s requirements, preferences, and qualifications.
+It searches the candidate database (within Salesforce context, or via integrated AI) to identify candidates who best match the job spec.
+Output:
+Ranked or filtered list of candidates most suitable for the job.
+Output may include details such as candidate fit, missing requirements, or summary explanations, depending on prompt/template configuration.
+User Feedback:
+While the AI is searching, users see "Searching Database" as a progress message.
+Results are displayed with no need for further confirmation or manual steps.
+In Essence: This solution enables recruiters to leverage AI for rapid, standardized candidate identification and ranking based on job requirements, improving both speed and quality of the hiring process.
+
+
 1. AI Grounding RTF Flow: Component Overview and Execution Order
 Type: Auto-launched Flow (triggered by Data Cloud data changes)
 1. Trigger/Event
@@ -236,3 +269,86 @@ If not, marks application as "Unsuccessful".
 
 In Essence:
 This solution ensures the final application record is fully and consistently updated using both automated AI analysis and flow-based business rules. It supports both full-time and graduate hiring pipelines, and guarantees key status fields and fit/gap assessments are always present for recruiter and system use.
+
+
+10. Solution Design: Application Questions and Answers Auto (AI-Driven Q&A for Applications in Salesforce ATS)
+1. Overview
+This section describes the technical design for automatically generating and handling candidate-specific and job-specific questions and answers during the application process in Salesforce ATS. This is achieved using a genAIFunction that orchestrates the generation of questions based on both job requirements and candidate profile, and updates the application record with the results.
+
+2. Key Component
+2.1 Application_Questions_and_Answers_Auto GenAIFunction
+File: genAiFunctions/Application_Questions_and_Answers_Auto/Application_Questions_and_Answers_Auto.genAiFunction-meta.xml
+Purpose:
+To ask the candidate questions as specified by the Job_Spec__c's Questions_And_Answers__c and Candidate_Specific_Questions__c fields, collect their responses, and update the Application__c record accordingly.
+Invocation Target:
+Type: Flow
+Name: Application_Questions_and_Answers_Auto
+User Experience:
+No explicit user confirmation is required.
+Progress indicator shows "Thinking of questions to Ask" to the user while the AI is generating and managing the questions/answers.
+Description Excerpt:
+This action is used to ask the Candidate__c questions per the Job_Spec__c's Questions_And_Answers__c field and Candidate_Specific_Questions__c field. and then update the Application record with the answers.
+
+3. Process Flow
+Input:
+The function receives references to both the Candidate and the Job Spec.
+AI Processing:
+AI generates relevant questions for the candidate based on both:
+The job's predefined questions (Questions_And_Answers__c)
+Any candidate-specific questions (Candidate_Specific_Questions__c)
+Presents these questions to the candidate (directly or through a flow-driven UI).
+Collects and structures candidate responses.
+Update:
+Updates the Application__c record with questions, answers, and any derived insights.
+User Feedback:
+Progress indicator is displayed during question generation and answer handling.
+In essence: This solution enables automation of dynamic, targeted Q&A during the application process, improving both candidate experience and data quality for recruiters.
+
+Solution Design: Email to Hiring Manager (AI-Driven Candidate Summaries for Hiring Manager Outreach)
+1. Overview
+This solution describes the orchestration of generating, reviewing, and sending a summary email to a hiring manager that includes a concise overview of candidates who have applied to a job spec. It leverages a Salesforce Flow for orchestration and a genAI prompt template for generating the candidate summary email content.
+
+2. Key Components
+2.1 Email to Hiring Manager SF Flow
+File: flows/Email_to_Hiring_Manager_SF.flow-meta.xml
+Purpose:
+To automate the generation, review, and sending of a candidate summary email to the hiring manager, and to update the corresponding job spec status.
+Flow Steps:
+Start:
+The flow is triggered (can be user-initiated or part of a larger automation).
+AI-Powered Email Generation:
+Calls the Email_To_Hiring_Manager genAI prompt template via the generatePromptResponse action.
+Passes the Job_Spec record as context.
+User Review Screen:
+Displays an editable screen for the user to review and edit the generated email (subject and body).
+Shows the recipient (hiring manager), subject, and email body with the AI-generated content.
+Send Email:
+Utilizes the emailSimple action to send the email to the hiring manager's email address.
+Subject and body can be user-modified before sending.
+Update Job Status:
+Updates Job_Spec__c.Status__c to "Candidates to be reviewed by Hiring Manager" to indicate the next stage of the process.
+Templates and Variables:
+Uses text templates to compose the email subject and body, pulling from the AI output and Job Spec fields.
+Variables include the Job_Spec SObject and fields for email composition.
+
+2.2 Email To Hiring Manager genAiPromptTemplate
+File: genAiPromptTemplates/Email_To_Hiring_Manager.genAiPromptTemplate-meta.xml
+Purpose:
+To instruct the AI to generate a clear, concise, and actionable candidate summary email for the hiring manager, based on the Job Spec and the list of candidates who applied.
+Input:
+Job_Spec SObject, including job title, hiring manager name, and a data provider (Get_Candidates_That_Applied_Prompt) for candidate details.
+Prompt Instructions:
+Use clear, concise, and straightforward language.
+Generate a subject line: Job title [Job Title] Candidates.
+Structure the email body as follows:
+Title with the Job Spec name.
+Greet the hiring manager by name.
+Intro paragraph explaining that candidates have been qualified.
+List each candidate: name, current title, years of experience, current company, rating.
+For each candidate, include an overview and analysis of fit (good/bad match).
+Provide a link to the Job Spec for the hiring manager to review applications.
+(Optional) Closing from the recruiter.
+All candidate summaries and details are provided via the supporting flow.
+Primary Model:
+Model may vary (e.g. GPT-4 Turbo, Omni, or Claude3), but always generates a complete, ready-to-send email.
+In essence: This solution streamlines communication between recruiters and hiring managers, ensuring that candidate summaries are clear, actionable, and consistently formatted. The combination of Salesforce Flow orchestration and AI-driven content generation enables rapid, accurate, and professional outreach at scale.

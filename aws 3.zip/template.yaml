@@ -1,0 +1,130 @@
+Transform: "AWS::Serverless-2016-10-31"
+Resources:
+  DataCloudS3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: !Sub "rag-data-cloud-${AWS::StackName}"
+      NotificationConfiguration:
+        LambdaConfigurations:
+          - Event: "s3:ObjectCreated:*"
+            Function: !GetAtt DataCloudNotificationFunction.Arn
+          - Event: "s3:ObjectRemoved:*"
+            Function: !GetAtt DataCloudNotificationFunction.Arn
+
+  DataCloudRagRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: "lambda.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "DataCloudRagPolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "secretsmanager:GetSecretValue"
+                Resource: !Ref DataCloudSecretsManagerSecret
+              - Effect: "Allow"
+                Action:
+                  - "dynamodb:GetItem"
+                  - "dynamodb:PutItem"
+                  - "dynamodb:UpdateItem"
+                  - "dynamodb:Scan"
+                Resource: !GetAtt DataCloudDynamoDBTable.Arn
+              - Effect: "Allow"
+                Action:
+                  - "s3:GetObject"
+                  - "s3:PutObject"
+                  - "s3:List*"
+                  - "s3:Get*"
+                  - "s3:DeleteObject"
+                  - "s3:ListBucket"
+                  - "s3:GetBucketNotification"
+                  - "s3:PutBucketNotification"
+                Resource: !Sub "arn:aws:s3:::rag-test-data-cloud/*"
+              - Effect: "Allow"
+                Action:
+                  - "lambda:InvokeFunction"
+                Resource: "*"
+              - Effect: "Allow"
+                "Action":
+                  - "logs:CreateLogGroup"
+                  - "logs:CreateLogStream"
+                  - "logs:PutLogEvents"
+                Resource: "*"
+
+  DataCloudNotificationFunction:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs20.x
+      CodeUri: .
+      MemorySize: 128
+      Timeout: 30
+      Role: !GetAtt DataCloudRagRole.Arn
+      Environment:
+        Variables:
+          SECRET_NAME: !Ref DataCloudSecretsManagerSecret
+          DYNAMODB_TABLE_NAME: !Ref DataCloudDynamoDBTable
+          SECRET_REGION: !Ref AWS::Region
+
+  LambdaInvokePermission:
+    Type: "AWS::Lambda::Permission"
+    Properties:
+      Action: "lambda:InvokeFunction"
+      FunctionName: !GetAtt DataCloudNotificationFunction.Arn
+      Principal: "s3.amazonaws.com"
+      SourceArn: !Sub "arn:aws:s3:::rag-data-cloud-${AWS::StackName}"
+
+  DataCloudDynamoDBTable:
+    Type: "AWS::DynamoDB::Table"
+    Properties:
+      TableName: !Sub "rag-data-cloud-${AWS::StackName}"
+      AttributeDefinitions:
+        - AttributeName: "jwt"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "jwt"
+          KeyType: "HASH"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      TimeToLiveSpecification:
+        AttributeName: "expires_at"
+        Enabled: true
+
+  DataCloudSecretsManagerSecret:
+    Type: "AWS::SecretsManager::Secret"
+    Properties:
+      Name: !Sub "rag-test-data-cloud-${AWS::StackName}"
+      Description: "Secrets for Data Cloud"
+      SecretString: !Sub |
+        {
+          "CLIENT_ID": "3MVG9rZjd7MXFdLjUbjyJxycPo61OMtRYVsAFq93ziCGisWH0DW_LendNcAeMuEmMEK3aoA2qzhqdlToUqYmb",
+          "USERNAME": "desmond.mc.donald784@agentforce.com",
+          "LOGIN_URL": "login.salesforce.com",
+          "RSA_PRIVATE_KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRQ1BtcmUzbXpnU3ViZlQKK1h1ZXNNVEh6Q0puL3hiY29Zd3RwYTlmdnhoWHRTc1JFYmt3Mktoem0zNFhCTlFOaHZuVkZnVUZUZGozc3NucwowUTVsWEZlOWdpUkxqKzN2SDA2Mlk0eTMvQW1CVjlXTWtaTGpzKzc1K09WUDNFWklkZSszOE4rdGhRdmV5WExnCkd0dGlyQTFNK3dzTDNQb3QxZzNkV0hQckw2TjJNRGo2ejUrdU4yak8vOFlFQ1hYQ20ybDlKZDZnVTlxWTZScVcKT09jd0RtS3Q5djg0MS9UbjFxaEh5dk9DNFQrQzV5c2dGVGxIVzIxOUp4TmcxU1NPdnNBL0ljNlpSWFNzNzlhdQo2bHpCcWRjQjUvNVpSdXMzTEt6VzF3K3p3NlRaaGpoajBMaHZkL29mZkVZVnFjSE5sVCsrSFl5T3lJaXFQZjJnCklnazJ5QjJUQWdNQkFBRUNnZ0VBRlNBVWtMMFQxYVZlaHA5MzhSTmVEMnBYVVdjMFRNYXpJVy96U2FtS0FqVVQKbmRJMnBSbnFSZitFNEF3RXlleW1TaE9RTDRTUk8zY2d2MmJOc0ZtU1NyMmZhMEpFSlY0OHJSWWQrRjdxWXcyeAp5NWtLdTlhWGZFeUNKMnBuS0hlNUNSMDFPb2lOQTN3dEd3eTRZMTZlSWtuNENRbThBQXd5US9La010L3lNd3VTCmxzSVdITWtCb05JdFlLcldKV3BySTc4Y25oMFpKa1pzK2QvTzhMSnMzbTYxRGxBSnQ1L1VqOUtKa0hTK1JIL2QKaGdYQkk4clNmK2lWZUF5WldTZWIwdk44SlJqblVsdnIrcWpKc2gxSEIrV1RNZjlWYVpSNEs0WXkxYmtLM2R5SQo0bmhYWms3aG9jZVFxd1JielNkSHg2ZHhUME0rVjZ4RlZKOFRRT2hNQ1FLQmdRREZUWHRONzYxc3VzWjBmd3o5CnBFZ1N0Y0Q3bXZ6QWUvenRRR3hrY2o5MFc3YTAvRGFKaDhJa0NqbWRZSlFhanJFdFpVdU9OQmdQY21PNk5GV0cKTW15QXRTRkRqaUM5djhranBjSzdUMGMxclBuc0dlZlRhTDZFRm5raW84dUMvT0dDRldOZUxPb0VYTHRFRjh0Mwo3bHlBeVRucko5Nk84UGRweWhOWEdvYml6d0tCZ1FDNlU1YUZJTllGc2lRdFFIa2RmRWhVeUhNVlI3c2ZBL0o5CmR3WFJUSk5VbE9rOFJQQnc3eFRiV0N2a2loQTJRcDZCRUtkVW9UNlVlNzYzMGNPak15bzAyWXdvV3l4MC9OWnkKU0pIM2o4ZkxWWnF4RENMYisvSWI1bHJXR0l5YU92bjdQUTRwbjZ0YkptMzlpclREbXVYZi9aZStBZmhuaGhDUgpiRFNRWTJCWi9RS0JnUUNiWmhWeUl3NnpEc0QwVElWTTJUR3pHdGh1MDNtem1YUnk0VVQrTUVYdVBiWkFBazVxCk1EVW04YTdEVjZnTzZzaDkrc1J4c25JbzZHM0g0U1JqV0IvQmwrZ2xMekoyZ1RISkUrdTJZQkMwSkJPTWRETDEKZmhCZ05Oc2YvMlp4T3YvYTEwRzJrU1dZWGZsWS9telJmem40YllWaXc3bzFWM0ZuTHpQZ2JSSkVYUUtCZ0dvOAp0S3J0WVBwWWF3WWVKN0JuSjNxbjIrNDdPdmJoTWtiVk1VejRBMTBMbHJ5VmRoNStRdjhaazlVMzN5eUE2WTBmCmFMajVRd3c0VGpMUytHQTZFUXVYS3JIcjRqcEYyeVBJT3VuVFloQ09tNmZ0Q29jeGJRYjVYYnVLdmNoR2JqZ1EKeE4xNHU2UTZFaWFwQ280bzZIN0JRZDdGa3RPNy9nQmNtTS9teVk0bEFvR0FEYTJMM0liWWdVYXlXclFleVVqbwp6V09PelgrcldHaTU3UGd5WVdreHRyMkQ4a1JlV1YyNE5JTzB6K2YyTnkrOUc5REVhREt3SHR2emhLTXQvbzdXClliZEhMT0Y0STlXT0dsd0RhbEtqRnMwekxpcUZJTCszOFBraENEZVJ6Y1k2STlEa05uZDdqeVZvZWVEWEtIbFoKM3lyRERBTWVkMjc5OHZpb09RS3RVS2M9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0="
+        }
+
+Outputs:
+  DataCloudNotificationFunctionArn:
+    Description: "ARN of the Data Cloud Notification Lambda Function"
+    Value: !GetAtt DataCloudNotificationFunction.Arn
+
+  DataCloudDynamoDBTableName:
+    Description: "Name of the created DynamoDB table"
+    Value: !Ref DataCloudDynamoDBTable
+
+  DataCloudSecretsManagerSecretArn:
+    Description: "ARN of the Secrets Manager secret"
+    Value: !Ref DataCloudSecretsManagerSecret
+
+  DataCloudS3BucketName:
+    Description: "Name of the created S3 bucket"
+    Value: !Ref DataCloudS3Bucket
